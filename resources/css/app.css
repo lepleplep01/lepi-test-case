@@ -1,0 +1,163 @@
+@import "tailwindcss";
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: "Outfit", sans-serif;
+    --font-serif: "Playfair Display", Georgia, serif;
+    --font-outfitserif: "Outfit", sans-serif;
+    --color-bdd-blue: #4d7bc8;
+    --color-bdd-blue-dark: #3a5fa0;
+    --color-bdd-green: #33b8a5;
+    --color-bdd-gold: #ffb14c;
+    --color-bdd-gold-hover: #e8a145;
+    --color-bdd-cream: #f7f4f2;
+    --color-bdd-cream-dark: #f4f0ea;
+    --color-bdd-dark: #222222;
+    --color-bdd-footer: #513b6a;
+    --color-bdd-footer-bottom: #131313;
+    --color-bdd-text: #222222;
+    --color-bdd-gray: #666666;
+    --color-bdd-light: #f7f4f2;
+    --color-bdd-border: #222222;
+    --color-bdd-teal: #a1ded6;
+    --color-bdd-teal-light: #d4f0ec;
+    --color-bdd-hero-blue: #c8d6ee;
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+    body {
+        color: var(--color-bdd-text);
+        background: #fff;
+        font-family: var(--font-sans);
+    }
+}
+
+@layer utilities {
+    .section-divider {
+        border-top: 2px solid #222;
+    }
+    .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: var(--color-bdd-gold);
+        color: var(--color-bdd-dark);
+        border: 2px solid var(--color-bdd-dark);
+        padding: 0.75rem 1.75rem;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        font-size: 0.875rem;
+        box-shadow: 4px 4px 0px var(--color-bdd-dark);
+        transition: all 0.2s;
+    }
+    .btn-primary:hover {
+        box-shadow: 2px 2px 0px var(--color-bdd-dark);
+        transform: translate(2px, 2px);
+    }
+    .btn-secondary {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: var(--color-bdd-blue);
+        color: #fff;
+        border: 2px solid var(--color-bdd-dark);
+        padding: 0.75rem 1.75rem;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        font-size: 0.875rem;
+        box-shadow: 4px 4px 0px var(--color-bdd-dark);
+        transition: all 0.2s;
+    }
+    .btn-secondary:hover {
+        box-shadow: 2px 2px 0px var(--color-bdd-dark);
+        transform: translate(2px, 2px);
+    }
+    .card-brutalist {
+        border: 2px solid var(--color-bdd-dark);
+        border-radius: 1rem;
+        overflow: hidden;
+        box-shadow: 4px 4px 0px var(--color-bdd-dark);
+    }
+    .service-card-bg {
+        background: var(--color-bdd-teal-light);
+        border-radius: 1rem;
+        padding: 1.5rem;
+    }
+}
+
+/* Sticky stacking service cards */
+.services-stack {
+    position: relative;
+}
+.service-sticky-card {
+    position: sticky;
+    border-radius: 1.25rem;
+    border: 2px solid #222;
+    overflow: hidden;
+    transition:
+        transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+    transform-origin: center top;
+}
+.service-sticky-card.is-pinned {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Fade-in-up on scroll for each card removal */
+.service-sticky-card {
+    opacity: 1;
+    transform: translateY(0);
+}
+.service-sticky-card.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+.animate-fade-in-up {
+    animation: fadeInUp 0.2s ease-out forwards;
+}
+.animate-scroll {
+    animation: scroll 30s linear infinite;
+}
+.animate-marquee {
+    animation: marquee 20s linear infinite;
+}
+
+[x-cloak] {
+    display: none !important;
+}
+
