@@ -956,7 +956,13 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14" />
                                     </svg>
                                 </button>
-                                <div x-show="active==={{ $i }}" x-collapse>
+                                <div x-show="active==={{ $i }}" x-collapse
+                                    x-transition:enter="transition ease-out duration-200 transform"
+                                    x-transition:enter-start="opacity-0 -translate-y-1"
+                                    x-transition:enter-end="opacity-100 translate-y-0"
+                                    x-transition:leave="transition ease-in duration-150 transform"
+                                    x-transition:leave-start="opacity-100 translate-y-0"
+                                    x-transition:leave-end="opacity-0 -translate-y-1">
                                     <div class="px-4 pb-4">
                                         <p class="text-sm text-[#666] mb-3 leading-relaxed">{{ $p[3] }}
                                         </p>
@@ -1091,7 +1097,7 @@
                             <div class="relative w-full mx-12 h-px bg-gray-300">
                                 <!-- The Sliding Handle (Navigation Circle) -->
                                 <div class="case-study-nav-handle absolute top-1/2 left-0 flex flex-col items-center z-20 cursor-grab active:cursor-grabbing select-none"
-                                    style="left: 0%; transform: translate(-50%, -50%); transition: left 0.3s ease-out;">
+                                    style="left: 0%; transform: translate(-50%, -38%); transition: left 0.3s ease-out;">
                                     <div
                                         class="w-20 h-20 bg-[#33b8a5] rounded-full flex items-center justify-center border-2 border-[#222] shadow-[4px_4px_0px_#222] relative gap-4 mb-2 pointer-events-auto">
                                         <button
@@ -1510,7 +1516,7 @@
                         @foreach ($posts as $p)
                             <div class="swiper-slide h-auto">
                                 <div
-                                    class="bg-white rounded-2xl overflow-hidden border-2 border-[#222] shadow-[4px_4px_0px_#222] hover:shadow-[1px_1px_0px_#222] hover:translate-x-[3px] hover:translate-y-[3px] transition-all h-full flex flex-col group">
+                                    class="bg-white min-h-[370px] rounded-2xl overflow-hidden border-2 border-[#222] shadow-[4px_4px_0px_#222] hover:shadow-[1px_1px_0px_#222] hover:translate-x-[3px] hover:translate-y-[3px] transition-all h-full flex flex-col group">
                                     <div class="h-40 overflow-hidden relative">
                                         <img src="{{ $p[3] }}" alt="{{ $p[1] }}"
                                             class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
