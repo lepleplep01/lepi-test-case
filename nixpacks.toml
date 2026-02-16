@@ -1,11 +1,7 @@
-# railway.toml
-
 [phases.setup]
-# Install PHP, Node.js, Composer, dan NPM
 nixPkgs = ["php", "nodejs", "composer"]
 
 [phases.build]
-# Install dependencies Laravel + Node
 cmds = [
     "composer install --no-interaction --optimize-autoloader",
     "npm install",
@@ -16,5 +12,4 @@ cmds = [
 ]
 
 [start]
-# Gunakan PHP built-in server pointing ke folder public
 cmd = "php -S 0.0.0.0:$PORT -t public"
