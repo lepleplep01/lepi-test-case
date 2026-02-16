@@ -1,5 +1,11 @@
-/vendor
+# Node.js dependencies
 /node_modules
+/npm-debug.log
+/yarn-error.log
+/pnpm-debug.log
+
+# Laravel dependencies
+/vendor
 /public/build
 /public/hot
 /public/storage
@@ -11,26 +17,25 @@
 /storage/framework/views
 /storage/logs
 
+# Environment
 .env
 .env.backup
 .env.production
 
+# PHPUnit / testing
 .phpunit.result.cache
 .phpunit.cache
+coverage
+
+# Homestead / Vagrant
 Homestead.json
 Homestead.yaml
 auth.json
 
-npm-debug.log
-yarn-error.log
-pnpm-debug.log
-
+# OS / editor files
 .DS_Store
 Thumbs.db
-
 .idea
 .vscode
 *.sublime-project
 *.sublime-workspace
-
-coverage
