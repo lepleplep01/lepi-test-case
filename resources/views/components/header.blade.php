@@ -12,7 +12,7 @@
                 </svg>
             </button>
             <a href="/">
-                <img src="{{ asset('images/logo1.png') }}" alt="Boleh Dicoba Digital" class="h-16 object-contain">
+                <img src="{{ asset('images/Logo1.png') }}" alt="Boleh Dicoba Digital" class="h-16 object-contain">
             </a>
         </div>
 
