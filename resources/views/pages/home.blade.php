@@ -582,18 +582,18 @@
                                 :class="active === {{ $i }} ? 'bg-white' : ''">
 
                                 {{-- Garis Vertikal di Kiri - Selalu Terlihat --}}
-                                <div class="absolute left-0 top-0 bottom-0 w-[3px] transition-all duration-300"
+                                <div class="absolute left-0 top-0 bottom-0 w-[1px] transition-all duration-300"
                                     :class="active === {{ $i }} ? 'bg-[#4A90E2]' : 'bg-[#e0e0e0]'"></div>
 
                                 <button @click="active = active === {{ $i }} ? null : {{ $i }}"
-                                    class="flex items-center w-full py-6 px-8 text-left group transition-all duration-200 relative">
+                                    class="flex items-center w-full py-0.5 px-6 text-left group transition-all duration-200 relative">
                                     <div class="flex items-center gap-5">
                                         <div class="w-[52px] h-[52px] flex items-center justify-center flex-shrink-0 transition-transform duration-300"
                                             :class="active === {{ $i }} && 'scale-110'">
                                             <img src="{{ $item[1] }}" alt="{{ $item[0] }}"
                                                 class="w-full h-full object-contain">
                                         </div>
-                                        <h4 class="font-outfit font-semibold text-[#1a1a1a] text-[18px] md:text-[19px] transition-colors duration-200 leading-tight"
+                                        <h4 class="font-outfit font-semibold text-[#1a1a1a] text-[10px] md:text-[15px] transition-colors duration-200 leading-tight"
                                             :class="active === {{ $i }} && 'text-[#4A90E2]'">
                                             {{ $item[0] }}
                                         </h4>
@@ -608,8 +608,8 @@
                                     x-transition:leave-start="opacity-100 transform translate-y-0"
                                     x-transition:leave-end="opacity-0 transform -translate-y-2" x-cloak
                                     style="display: none;">
-                                    <div class="px-8 pb-6 pt-0">
-                                        <p class="font-outfit text-[15px] text-[#666] leading-[1.75] pl-[72px]">
+                                    <div class="px-4 pb-2 pt-0">
+                                        <p class="font-outfit text-[15px] text-[#666] leading-[1.5] pl-[72px]">
                                             {{ $item[2] }}
                                         </p>
                                     </div>
