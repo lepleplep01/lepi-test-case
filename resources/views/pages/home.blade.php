@@ -5,9 +5,9 @@
     {{-- Hero Section --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <section class="bg-white pt-[100px] pb-16">
+    <section class="bg-white pt-[120px] pb-20 md:pb-24">
 
-        <div class="grid grid-cols-1 md:grid-cols-3 max-w-[1400px] mx-auto items-center">
+        <div class="grid grid-cols-1 md:grid-cols-3 max-w-[1200px] mx-auto items-center">
 
             <!-- KIRI -->
             <div class="hidden md:flex justify-center">
@@ -53,10 +53,10 @@
 
 
     {{-- Client Logos Section --}}
-    <section class="py-12 bg-white border-t-2 border-bdd-dark" x-data="{ activeTab: 'fashion' }">
-        <div class="max-w-[1300px] mx-auto px-4">
+    <section class="py-20 md:py-24 bg-white border-bdd-dark" x-data="{ activeTab: 'fashion' }">
+        <div class="max-w-[1200px] mx-auto px-4">
             <div class="bg-white rounded-3xl border-2 border-bdd-dark p-8 md:p-15 overflow-hidden relative">
-                <h3 class="font-outfitserif text-2xl md:text-[1.5rem] text-center text-[#222] mb-7">Over <span
+                <h3 class="font-outfitserif text-2xl md:text-[1.5rem] text-center text-[#222] mb-10">Over <span
                         class="font-outfitserif  text-bdd-green">800+</span> Business growing with Boleh Dicoba Digital</h3>
                 <div class="flex items-center justify-center gap-4 md:gap-8 border-b border-gray-200 mb-10 pb-0">
                     @foreach (['fashion' => 'Fashion', 'fnb' => 'FnB', 'beauty' => 'Beauty', 'lifestyle' => 'Lifestyle', 'startup' => 'Startup & Other', 'corporate' => 'FMCGs & Corporations'] as $k => $v)
@@ -251,7 +251,7 @@
 
     {{-- Stats / We On Numbers --}}
     <section class="py-16 md:py-20 bg-[#f7f4f2]">
-        <div class="max-w-[1100px] mx-auto px-4">
+        <div class="max-w-[1200px] mx-auto px-4">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
                 <div class="text-left pt-3">
                     <p class="text-bdd-green text-xs font-semibold uppercase tracking-[0.2em] mb-4">WE ON NUMBERS</p>
@@ -529,8 +529,8 @@
 
 
     {{-- Why Choose Us --}}
-    <section class="py-16 md:py-24 bg-white">
-        <div class="max-w-[1400px] mx-auto px-4 sm:px-6">
+    <section class="py-20 md:py-24 bg-white">
+        <div class="max-w-[1200px] mx-auto px-4 sm:px-6">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
                 {{-- Image Column --}}
                 <div class="relative order-2 lg:order-1">
@@ -633,7 +633,7 @@
     {{-- Services with Sticky Card Stacking Animation --}}
 
     <section class="py-16 md:py-20 bg-white" id="services-section">
-        <div class="max-w-[1300px] mx-auto px-4">
+        <div class="max-w-[1200px] mx-auto px-4">
             <!-- Flex container: 2 kolom -->
             <div class="flex flex-col md:flex-row md:justify-between gap-8 md:gap-12">
 
@@ -774,7 +774,7 @@
 
     <!-- Our Space Section -->
     <section class="py-16 md:py-20 bg-white">
-        <div class="max-w-[1100px] mx-auto px-4">
+        <div class="max-w-[1200px] mx-auto px-4">
             <h2 class="font-outfitserif text-2xl md:text-[2rem] text-[#222] text-center mb-3">Our Space - Where Ideas
                 Take Flight
             </h2>
@@ -860,7 +860,7 @@
 
     <!-- Live Studio Section dengan Swiper -->
     <section class="py-16 md:py-20 bg-[#f7f4f2]">
-        <div class="max-w-[1100px] mx-auto px-4">
+        <div class="max-w-[1200px] mx-auto px-4">
             <h2 class="font-outfitserif text-2xl md:text-[2rem] text-[#222] text-center mb-3">Our Live Studio – Lights,
                 Camera, Conversion!</h2>
             <p class="font-outfit text-[#666] text-sm text-center max-w-2xl mx-auto mb-10">BDD's state-of-the-art studio is
@@ -921,7 +921,7 @@
 
     {{-- Programs --}}
     <section class="py-16 md:py-20 bg-[#f7f4f2]">
-        <div class="max-w-[1100px] mx-auto px-4">
+        <div class="max-w-[1200px] mx-auto px-4">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                 <div>
                     <p class="font-outfitserif text-bdd-green text-xs font-semibold uppercase tracking-[0.2em] mb-3">OUR
@@ -992,7 +992,7 @@
 
     {{-- Case Studies --}}
     <section class="py-16 md:py-24 bg-white overflow-hidden">
-        <div class="max-w-[1240px] mx-auto px-4">
+        <div class="max-w-[1200px] mx-auto px-4">
             <div class="flex flex-col lg:flex-row gap-12 lg:gap-20">
                 <!-- Left Content: Title & Button -->
                 <div class="w-full lg:w-[32%] flex flex-col justify-center">
@@ -1311,7 +1311,7 @@
 
     {{-- Testimonials --}}
     <section class="py-16 md:py-24 bg-[#f8f9fa] overflow-hidden">
-        <div class="max-w-[1240px] mx-auto px-4 text-center mb-16">
+        <div class="max-w-[1200px] mx-auto px-4 text-center mb-16">
             <p class="font-outfitserif text-bdd-footer text-[10px] font-bold uppercase tracking-[0.2em] mb-4">FROM OUR
                 NOTABLE CLIENTS</p>
             <h3
@@ -1457,7 +1457,7 @@
 
     {{-- News & Blog --}}
     <section class="py-16 md:py-24 bg-white overflow-hidden">
-        <div class="max-w-[1440px] mx-auto px-4 lg:px-12">
+        <div class="max-w-[1200px] mx-auto px-4 lg:px-12">
             <!-- Header Content: Title & Action Button -->
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
                 <div>
@@ -1589,7 +1589,7 @@
         </div>
     </section>
 
-    <div class="section-divider max-w-[1200px] mx-auto"></div>
+    <div class="max-w-[1200px] mx-auto"></div>
 
     {{-- Contact Form --}}
     @include('components.contact-form')
