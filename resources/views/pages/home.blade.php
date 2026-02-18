@@ -7,26 +7,26 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <section class="bg-white pt-[120px] pb-20 md:pb-24">
 
-        <div class="grid grid-cols-1 md:grid-cols-3 max-w-[1200px] mx-auto items-center">
+        <div class="grid grid-cols-12 grid-rows-1 gap-2 mx-auto items-center">
 
             <!-- KIRI -->
-            <div class="hidden md:flex justify-center">
+            <div class="col-span-3 hidden md:flex justify-start mx-0 px-0">
                 <img src="https://bolehdicoba.com/wp-content/uploads/2024/06/Group-40451-1.png"
-                    class="w-full max-w-[360px] object-contain">
+                    class="w-full max-w-[263px] object-contain">
             </div>
 
             <!-- TENGAH -->
-            <div class="text-center px-4">
+            <div class="col-span-6 text-center px-4">
                 <h6 class="font-outfitserif text-bdd-footer text-[18px] mb-5">
                     GROW WITH US
                 </h6>
 
                 <h1
-                    class="font-outfitserif text-[42px] md:text-[64px] font-semibold text-[#222] leading-[1.15] mb-6 max-w-2xl mx-auto">
+                    class="font-outfitserif text-[64px] md:text-[54px] font-semibold text-[#222] leading-[1.15] mb-6 max-w-2xl mx-auto">
                     Expand your brand through measurable Digital Strategies
                 </h1>
 
-                <p class="font-outfitserif text-[#666] text-base md:text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
+                <p class="font-outfitserif text-[#666] text-base md:text-[16px] max-w-2xl mx-auto mb-8 leading-relaxed">
                     At BDD, we are players in the integrated digital marketing game, devoted to the pursuit of collective
                     sustainable growth that ensures lasting success. Our mission is to elevate your business to new heights
                     by exploring actionable possibilities.
@@ -34,7 +34,7 @@
 
                 <a href="{{ route('about') }}" class="btn-primary">
                     <span>Get to Know Us!</span>
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 13 20">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
@@ -42,9 +42,9 @@
             </div>
 
             <!-- KANAN -->
-            <div class="hidden md:flex justify-center">
+            <div class="col-span-3 hidden md:flex justify-end mx-0 px-0">
                 <img src="https://bolehdicoba.com/wp-content/uploads/2024/06/Group-40452-1.png"
-                    class="w-full max-w-[360px] object-contain">
+                    class="w-full max-w-[257px] object-contain">
             </div>
 
         </div>
@@ -53,7 +53,7 @@
 
 
     {{-- Client Logos Section --}}
-    <section class="py-20 md:py-24 bg-white border-bdd-dark" x-data="{ activeTab: 'fashion' }">
+    <section class="pt-12 md:pt-16 pb-20 md:pb-24 bg-white border-bdd-dark" x-data="{ activeTab: 'fashion' }">
         <div class="max-w-[1200px] mx-auto px-4">
             <div class="bg-white rounded-3xl border-2 border-bdd-dark p-8 md:p-15 overflow-hidden relative">
                 <h3 class="font-outfitserif text-2xl md:text-[1.5rem] text-center text-[#222] mb-10">Over <span
@@ -246,7 +246,7 @@
                 </div>
     </section>
 
-    
+
 
 
     {{-- Stats / We On Numbers --}}
@@ -544,8 +544,7 @@
                         WHY CHOOSE US
                     </p>
 
-                    <h2
-                        class="font-outfit text-[32px] md:text-[42px] lg:text-[44px] text-[#222] mb-6 leading-[1.2]">
+                    <h2 class="font-outfit text-[32px] md:text-[42px] lg:text-[44px] text-[#222] mb-6 leading-[1.2]">
                         It's not about how much budget you spent, but how you spend them.
                     </h2>
 
@@ -1457,7 +1456,7 @@
 
     {{-- News & Blog --}}
     <section class="py-16 md:py-24 bg-white overflow-hidden">
-        <div class="max-w-[1200px] mx-auto px-4 lg">
+        <div class="max-w-[1200px] mx-auto px-4 lg:px-12">
             <!-- Header Content: Title & Action Button -->
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
                 <div>
