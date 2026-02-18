@@ -1,9 +1,10 @@
-<header x-data="{ mobileOpen: false, servicesOpen: false, programOpen: false, infoOpen: false, searchOpen: false }" class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 font-sans">
+<header x-data="{ mobileOpen: false }" class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 font-sans">
     <div class="max-w-7xl mx-auto px-6 h-[76px] flex items-center justify-between">
 
-        <!-- Logo -->
+        <!-- Logo dan Tombol Hamburger -->
         <div class="flex items-center gap-4">
-            <button @click="mobileOpen = !mobileOpen" class="xl:hidden p-2 text-gray-700">
+            <!-- Tombol Hamburger untuk Mobile -->
+            <button @click="mobileOpen = !mobileOpen" class="xl:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors">
                 <svg x-show="!mobileOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                 </svg>
@@ -11,10 +12,13 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                 </svg>
             </button>
+            <!-- Logo -->
             <a href="/">
                 <img src="{{ asset('images/Logo1.png') }}" alt="Boleh Dicoba Digital" class="h-16 object-contain">
             </a>
         </div>
+
+        
 
         <!-- Desktop Navigation -->
         <nav class="hidden xl:flex items-center space-x-8 text-sm font-medium text-gray-800">

@@ -54,7 +54,7 @@
 
     {{-- Client Logos Section --}}
     <section class="py-12 bg-white border-t-2 border-bdd-dark" x-data="{ activeTab: 'fashion' }">
-        <div class="max-w-[1200px] mx-auto px-4">
+        <div class="max-w-[1300px] mx-auto px-4">
             <div class="bg-white rounded-3xl border-2 border-bdd-dark p-8 md:p-15 overflow-hidden relative">
                 <h3 class="font-outfitserif text-2xl md:text-[1.5rem] text-center text-[#222] mb-7">Over <span
                         class="font-outfitserif  text-bdd-green">800+</span> Business growing with Boleh Dicoba Digital</h3>
@@ -247,7 +247,7 @@
     </section>
 
     
-        <div class="section-divider max-w-[1200px] mx-auto"></div>
+
 
     {{-- Stats / We On Numbers --}}
     <section class="py-16 md:py-20 bg-[#f7f4f2]">
