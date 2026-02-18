@@ -1,5 +1,5 @@
 <section class="py-16 md:py-24 bg-white">
-    <div class="max-w-[1300px] mx-auto px-4">
+    <div class="max-w-full mx-auto px-3">
         <div class="section-know-more">
             <div class="knowmore-inner">
                 <div class="knowmore-image">
@@ -107,10 +107,10 @@
         }
 
         .knowmore-inner {
-            max-width: 1140px;
-            margin: 70px auto 60px;
+            max-width: 100%;
+            margin: 30px auto 30px;
             display: flex;
-            gap: 30px;
+            gap: 20px;
             align-items: flex-start;
         }
 

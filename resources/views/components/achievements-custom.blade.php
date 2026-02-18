@@ -3,7 +3,7 @@
 
             <!-- LEFT LOGOS -->
             <div class="achievement-left show">
-                <div class="logo-row">
+                <div class="logo-row max-w-full gap-8">
 
                     <!-- Meta Partner -->
                     <div class="achievement-card">
@@ -101,7 +101,7 @@
             flex-direction: row;
             align-items: center;
             justify-content: center;
-            gap: 18px;
+            gap: 50px;
             width: 100%;
             flex-wrap: nowrap;
         }

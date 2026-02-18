@@ -5,57 +5,59 @@
     {{-- Hero Section --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <section class="bg-white pt-[120px] pb-20 md:pb-24">
+    <section class="bg-white pt-[200px] pb-20 md:pb-24">
+        <div class="max-w-full mx-auto px-0">
+            <div class="grid grid-cols-12 grid-rows-1 gap-2 mx-auto items-center">
 
-        <div class="grid grid-cols-12 grid-rows-1 gap-2 mx-auto items-center">
+                <!-- KIRI -->
+                <div class="col-span-3 hidden md:flex justify-start mx-0 px-12">
+                    <img src="https://bolehdicoba.com/wp-content/uploads/2024/06/Group-40451-1.png"
+                        class="w-full max-w-[263px] object-contain">
+                </div>
 
-            <!-- KIRI -->
-            <div class="col-span-3 hidden md:flex justify-start mx-0 px-0">
-                <img src="https://bolehdicoba.com/wp-content/uploads/2024/06/Group-40451-1.png"
-                    class="w-full max-w-[263px] object-contain">
+                <!-- TENGAH -->
+                <div class="col-span-6 text-center px-4">
+                    <h6 class="font-outfitserif text-bdd-footer text-[18px] mb-5">
+                        GROW WITH US
+                    </h6>
+
+                    <h1
+                        class="font-outfitserif text-[64px] md:text-[54px] font-semibold text-[#222] leading-[1.15] mb-6 max-w-2xl mx-auto">
+                        Expand your brand through measurable Digital Strategies
+                    </h1>
+
+                    <p class="font-outfitserif text-[#666] text-base md:text-[16px] max-w-2xl mx-auto mb-8 leading-relaxed">
+                        At BDD, we are players in the integrated digital marketing game, devoted to the pursuit of
+                        collective
+                        sustainable growth that ensures lasting success. Our mission is to elevate your business to new
+                        heights
+                        by exploring actionable possibilities.
+                    </p>
+
+                    <a href="{{ route('about') }}" class="btn-primary">
+                        <span>Get to Know Us!</span>
+                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 13 20">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- KANAN -->
+                <div class="col-span-3 hidden md:flex justify-end mx-0 px-12">
+                    <img src="https://bolehdicoba.com/wp-content/uploads/2024/06/Group-40452-1.png"
+                        class="w-full max-w-[257px] object-contain">
+                </div>
+
             </div>
-
-            <!-- TENGAH -->
-            <div class="col-span-6 text-center px-4">
-                <h6 class="font-outfitserif text-bdd-footer text-[18px] mb-5">
-                    GROW WITH US
-                </h6>
-
-                <h1
-                    class="font-outfitserif text-[64px] md:text-[54px] font-semibold text-[#222] leading-[1.15] mb-6 max-w-2xl mx-auto">
-                    Expand your brand through measurable Digital Strategies
-                </h1>
-
-                <p class="font-outfitserif text-[#666] text-base md:text-[16px] max-w-2xl mx-auto mb-8 leading-relaxed">
-                    At BDD, we are players in the integrated digital marketing game, devoted to the pursuit of collective
-                    sustainable growth that ensures lasting success. Our mission is to elevate your business to new heights
-                    by exploring actionable possibilities.
-                </p>
-
-                <a href="{{ route('about') }}" class="btn-primary">
-                    <span>Get to Know Us!</span>
-                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 13 20">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                </a>
-            </div>
-
-            <!-- KANAN -->
-            <div class="col-span-3 hidden md:flex justify-end mx-0 px-0">
-                <img src="https://bolehdicoba.com/wp-content/uploads/2024/06/Group-40452-1.png"
-                    class="w-full max-w-[257px] object-contain">
-            </div>
-
-        </div>
 
     </section>
 
 
     {{-- Client Logos Section --}}
-    <section class="pt-12 md:pt-16 pb-20 md:pb-24 bg-white border-bdd-dark" x-data="{ activeTab: 'fashion' }">
-        <div class="max-w-[1200px] mx-auto px-4">
-            <div class="bg-white rounded-3xl border-2 border-bdd-dark p-8 md:p-15 overflow-hidden relative">
+    <section class="pt-6 md:pt-10 pb-20 md:pb-24 bg-white border-bdd-dark" x-data="{ activeTab: 'fashion' }">
+        <div class="max-w-full mx-auto px-10">
+            <div class="bg-white rounded-3xl border-1 border-bdd-dark p-8 md:p-15 overflow-hidden relative">
                 <h3 class="font-outfitserif text-2xl md:text-[1.5rem] text-center text-[#222] mb-10">Over <span
                         class="font-outfitserif  text-bdd-green">800+</span> Business growing with Boleh Dicoba Digital</h3>
                 <div class="flex items-center justify-center gap-4 md:gap-8 border-b border-gray-200 mb-10 pb-0">
@@ -250,12 +252,12 @@
 
 
     {{-- Stats / We On Numbers --}}
-    <section class="py-20 md:py-24 bg-[#f7f4f2]">
+    <section class="py-10 md:py-10 bg-[#f7f4f2]">
         <div class="max-w-[1200px] mx-auto px-4">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
                 <div class="text-left pt-3">
-                    <p class="text-bdd-green text-xs font-semibold uppercase tracking-[0.2em] mb-4">WE ON NUMBERS</p>
-                    <h3 class="font-outfitserif text-3xl md:text-[2.4rem] text-[#222] mb-4 leading-tight">We Establish an
+                    <p class="text-bdd-gray text-xs font-semibold uppercase tracking-[0.2em] mb-4">WE ON NUMBERS</p>
+                    <h3 class="font-outfitserif text-2xl md:text-[2.4rem] text-[#222] mb-4 leading-tight">We Establish an
                         Ecosystem to Enhance
                         Brand Growth.</h3>
                     <p class="text-[#666] text-sm max-w-[38rem] mb-14 leading-relaxed">Beyond conventional marketing norms,
@@ -312,7 +314,7 @@
                         ];
                     @endphp
 
-                    <div class="grid grid-cols-5 gap-5">
+                    <div class="grid grid-cols-5 gap-3">
                         @foreach ($cards as $c)
                             <div class="stat-card reveal-visible"
                                 style="grid-column: {{ $c['col'] }}; grid-row: {{ $c['row'] }}; --accent: {{ $c['color'] }};">
@@ -527,35 +529,38 @@
 
     <x-achievements-custom />
 
-
     {{-- Why Choose Us --}}
-    <section class="py-20 md:py-24 bg-white">
-        <div class="max-w-[1200px] mx-auto px-4 sm:px-6">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-                {{-- Image Column --}}
-                <div class="relative order-2 lg:order-1">
+    <section class="py-16 md:py-20 bg-white">
+        <div class="max-w-full mx-auto px-4">
+            {{-- Flexbox dengan items-center untuk vertikal tengah --}}
+            <div class="flex flex-col lg:flex-row items-center gap-4 lg:gap-8">
+                {{-- Image Column - Proporsi 1/2 --}}
+                <div class="w-full lg:w-1/2 flex justify-end">
                     <img src="https://bolehdicoba.com/wp-content/uploads/2024/06/Group-40343-7.png" alt="Why Choose Us"
-                        class="w-full h-auto rounded-3xl shadow-lg">
+                        class="w-full max-w-md lg:max-w-lg h-auto rounded-xl m-0 p-0 block">
                 </div>
 
-                {{-- Content Column --}}
-                <div class="order-1 lg:order-2">
-                    <p class="font-outfit text-[#999] text-[11px] font-semibold uppercase tracking-[0.25em] mb-4">
+                {{-- Content Column - Proporsi 1/2 --}}
+                <div class="w-full lg:w-1/2 max-w-lg text-center lg:text-left">
+                    {{-- HAPUS margin bottom yang tidak perlu --}}
+                    <p class="font-outfit text-[#999] text-[11px] font-semibold uppercase tracking-[0.25em] mb-2">
                         WHY CHOOSE US
                     </p>
 
-                    <h2 class="font-outfit text-[32px] md:text-[42px] lg:text-[44px] text-[#222] mb-6 leading-[1.2]">
+                    {{-- KURANGI margin bottom --}}
+                    <h2 class="font-outfit text-[28px] md:text-[32px] lg:text-[34px] text-[#222] mb-3 leading-[1.2]">
                         It's not about how much budget you spent, but how you spend them.
                     </h2>
 
-                    <p class="font-outfit text-[#666] text-[16px] md:text-base mb-5 leading-[1.3]">
+                    {{-- KURANGI margin bottom --}}
+                    <p class="font-outfit text-[#666] text-[14px] md:text-[15px] mb-4 leading-[1.5]">
                         Embracing a focus of sustainable growth, we prioritise cultivating long-term partnerships, ensuring
                         your brand’s growth aligns with effective practices. Together, we create a positive impact that goes
                         beyond immediate gains, making a meaningful difference in the lives of your customers and the market
                         you serve.
                     </p>
 
-                    {{-- Accordion --}}
+                    {{-- Accordion dengan jarak minimal --}}
                     <div x-data="{ active: null }" class="space-y-0">
                         @php
                             $whyItems = [
@@ -585,15 +590,18 @@
                                 <div class="absolute left-0 top-0 bottom-0 w-[1px] transition-all duration-300"
                                     :class="active === {{ $i }} ? 'bg-[#4A90E2]' : 'bg-[#e0e0e0]'"></div>
 
+                                {{-- KURANGI padding vertical --}}
                                 <button @click="active = active === {{ $i }} ? null : {{ $i }}"
-                                    class="flex items-center w-full py-0.5 px-6 text-left group transition-all duration-200 relative">
-                                    <div class="flex items-center gap-5">
-                                        <div class="w-[52px] h-[52px] flex items-center justify-center flex-shrink-0 transition-transform duration-300"
+                                    class="flex items-center w-full py-1 px-4 text-left group transition-all duration-200 relative">
+                                    {{-- KURANGI gap --}}
+                                    <div class="flex items-center gap-3">
+                                        {{-- PERKECIL ukuran icon --}}
+                                        <div class="w-[32px] h-[32px] flex items-center justify-center flex-shrink-0 transition-transform duration-300"
                                             :class="active === {{ $i }} && 'scale-110'">
                                             <img src="{{ $item[1] }}" alt="{{ $item[0] }}"
                                                 class="w-full h-full object-contain">
                                         </div>
-                                        <h4 class="font-outfit font-semibold text-[#1a1a1a] text-[10px] md:text-[15px] transition-colors duration-200 leading-tight"
+                                        <h4 class="font-outfit font-semibold text-[#1a1a1a] text-[14px] md:text-[15px] transition-colors duration-200 leading-tight"
                                             :class="active === {{ $i }} && 'text-[#4A90E2]'">
                                             {{ $item[0] }}
                                         </h4>
@@ -608,8 +616,10 @@
                                     x-transition:leave-start="opacity-100 transform translate-y-0"
                                     x-transition:leave-end="opacity-0 transform -translate-y-2" x-cloak
                                     style="display: none;">
+                                    {{-- KURANGI padding kiri --}}
                                     <div class="px-4 pb-2 pt-0">
-                                        <p class="font-outfit text-[15px] text-[#666] leading-[1.5] pl-[72px]">
+                                        <p
+                                            class="font-outfit text-[13px] md:text-[14px] text-[#666] leading-[1.5] pl-[44px]">
                                             {{ $item[2] }}
                                         </p>
                                     </div>
@@ -621,7 +631,6 @@
             </div>
         </div>
     </section>
-
     <style>
         [x-cloak] {
             display: none !important;
@@ -632,31 +641,36 @@
     {{-- Services with Sticky Card Stacking Animation --}}
 
     <section class="py-20 md:py-24 bg-white" id="services-section">
-        <div class="max-w-[1200px] mx-auto px-4">
+        <div class="max-w-full mx-auto px-12">
             <!-- Flex container: 2 kolom -->
-            <div class="flex flex-col md:flex-row md:justify-between gap-8 md:gap-12">
+            <div class="max-w-full flex flex-row justify-center items-center">
 
-                <!-- Bagian Kiri: OUR SERVICES + Heading (tetap di atas) -->
-                <div class="md:w-1/2 text-left">
-                    <p
-                        class="font-outfitserif text-bdd-dark[#7B6CC4] text-xs font-semibold uppercase tracking-[0.2em] mb-4 scroll-animate">
-                        OUR SERVICES
-                    </p>
-                    <h3 class="font-outfitserif text-2xl md:text-[2.2rem] text-[#111] leading-tight mb-3 scroll-animate">
-                        We Offer a Wide Services<br>
-                        Aimed to Support your<br>
-                        Business
-                    </h3>
-                </div>
+                <div class="w-full flex flex-row md:flex-row md:justify-between gap-8 px-12 md:px-24 my-8">
 
-                <!-- Bagian Kanan: Deskripsi dengan margin-top agar lebih turun -->
-                <div class="md:w-1/2 text-left md:text-left">
-                    <p class="font-outfitserif text-[#666] text-xm leading-relaxed scroll-animate md:mt-30">
-                        It may surprise you, but digital marketing is not a single strategy,<br>
-                        it covers a lot of spectrum, but don't worry, we got you!
-                    </p>
+                    <!-- Bagian Kiri: OUR SERVICES + Heading (tetap di atas) -->
+                    <div class="text-left w-1/2">
+                        <p
+                            class="font-outfitserif text-bdd-dark[#7B6CC4] text-xs font-semibold uppercase tracking-[0.2em] mb-4 scroll-animate">
+                            OUR SERVICES
+                        </p>
+                        <h3
+                            class="font-outfitserif text-2xl md:text-[2.6rem] text-[#111] leading-tight mb-3 scroll-animate">
+                            We Offer a Wide Services<br>
+                            Aimed to Support your<br>
+                            Business
+                        </h3>
+                    </div>
+
+                    <!-- Bagian Kanan: Deskripsi dengan margin-top agar lebih turun -->
+                    <div class="flex items-end text-left w-1/2">
+                        <p class="font-outfitserif text-[#222] text-xm leading-relaxed scroll-animate md:mt-30">
+                            It may surprise you, but digital marketing is not a single strategy,</br>
+                            it covers a lot of spectrum, but don't worry, we got you!
+                        </p>
+                    </div>
                 </div>
             </div>
+
 
             <div class="services-stack">
                 @php
@@ -773,11 +787,11 @@
 
     <!-- Our Space Section -->
     <section class="py-20 md:py-24 bg-white">
-        <div class="max-w-[1200px] mx-auto px-4">
-            <h2 class="font-outfitserif text-2xl md:text-[2rem] text-[#222] text-center mb-3">Our Space - Where Ideas
+        <div class="max-w-full mx-auto px-50">
+            <h2 class="font-outfitserif text-[40px] md:text-[2rem] text-[#222] text-center mb-3">Our Space - Where Ideas
                 Take Flight
             </h2>
-            <p class="font-outfit text-[#666] text-sm text-center max-w-xl mx-auto mb-10">Step into BDD's Agency — where
+            <p class="font-outfit text-[#666] text-lg max-w-lg mx-auto mt-1 text-center leading-relaxed">Step into BDD's Agency — where
                 strategy meets imagination. A space designed for collaboration, innovation, and bringing bold ideas to life.
             </p>
 
@@ -859,10 +873,10 @@
 
     <!-- Live Studio Section dengan Swiper -->
     <section class="py-20 md:py-24 bg-[#f7f4f2]">
-        <div class="max-w-[1200px] mx-auto px-4">
+        <div class="max-w-full mx-auto px-50">
             <h2 class="font-outfitserif text-2xl md:text-[2rem] text-[#222] text-center mb-3">Our Live Studio – Lights,
                 Camera, Conversion!</h2>
-            <p class="font-outfit text-[#666] text-sm text-center max-w-2xl mx-auto mb-10">BDD's state-of-the-art studio is
+            <p class="font-outfit text-[#666] text-lg max-w-2xl mx-auto mt-1 text-center leading-relaxed">BDD's state-of-the-art studio is
                 built for high-impact live streaming and content production. From brands to creators, we turn every session
                 into a performance that sells.</p>
 
@@ -920,7 +934,7 @@
 
     {{-- Programs --}}
     <section class="py-20 md:py-24 bg-[#f7f4f2]">
-        <div class="max-w-[1200px] mx-auto px-4">
+        <div class="max-w-full mx-auto px-4">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                 <div>
                     <p class="font-outfitserif text-bdd-green text-xs font-semibold uppercase tracking-[0.2em] mb-3">OUR
@@ -991,7 +1005,7 @@
 
     {{-- Case Studies --}}
     <section class="py-16 md:py-24 bg-white overflow-hidden">
-        <div class="max-w-[1200px] mx-auto px-4">
+        <div class="max-w-full mx-auto px-4">
             <div class="flex flex-col lg:flex-row gap-12 lg:gap-20">
                 <!-- Left Content: Title & Button -->
                 <div class="w-full lg:w-[32%] flex flex-col justify-center">
