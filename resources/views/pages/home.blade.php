@@ -16,7 +16,7 @@
             </div>
 
             <!-- TENGAH -->
-            <div class="text-center px-6">
+            <div class="text-center px-4">
                 <h6 class="font-outfitserif text-bdd-footer text-[18px] mb-5">
                     GROW WITH US
                 </h6>
@@ -250,7 +250,7 @@
 
 
     {{-- Stats / We On Numbers --}}
-    <section class="py-16 md:py-20 bg-[#f7f4f2]">
+    <section class="py-20 md:py-24 bg-[#f7f4f2]">
         <div class="max-w-[1200px] mx-auto px-4">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
                 <div class="text-left pt-3">
@@ -632,7 +632,7 @@
 
     {{-- Services with Sticky Card Stacking Animation --}}
 
-    <section class="py-16 md:py-20 bg-white" id="services-section">
+    <section class="py-20 md:py-24 bg-white" id="services-section">
         <div class="max-w-[1200px] mx-auto px-4">
             <!-- Flex container: 2 kolom -->
             <div class="flex flex-col md:flex-row md:justify-between gap-8 md:gap-12">
@@ -773,7 +773,7 @@
     </style>
 
     <!-- Our Space Section -->
-    <section class="py-16 md:py-20 bg-white">
+    <section class="py-20 md:py-24 bg-white">
         <div class="max-w-[1200px] mx-auto px-4">
             <h2 class="font-outfitserif text-2xl md:text-[2rem] text-[#222] text-center mb-3">Our Space - Where Ideas
                 Take Flight
@@ -859,7 +859,7 @@
     </style>
 
     <!-- Live Studio Section dengan Swiper -->
-    <section class="py-16 md:py-20 bg-[#f7f4f2]">
+    <section class="py-20 md:py-24 bg-[#f7f4f2]">
         <div class="max-w-[1200px] mx-auto px-4">
             <h2 class="font-outfitserif text-2xl md:text-[2rem] text-[#222] text-center mb-3">Our Live Studio – Lights,
                 Camera, Conversion!</h2>
@@ -920,7 +920,7 @@
     </script>
 
     {{-- Programs --}}
-    <section class="py-16 md:py-20 bg-[#f7f4f2]">
+    <section class="py-20 md:py-24 bg-[#f7f4f2]">
         <div class="max-w-[1200px] mx-auto px-4">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                 <div>
@@ -1457,7 +1457,7 @@
 
     {{-- News & Blog --}}
     <section class="py-16 md:py-24 bg-white overflow-hidden">
-        <div class="max-w-[1200px] mx-auto px-4 lg:px-12">
+        <div class="max-w-[1200px] mx-auto px-4 lg">
             <!-- Header Content: Title & Action Button -->
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
                 <div>
@@ -1589,7 +1589,6 @@
         </div>
     </section>
 
-    <div class="max-w-[1200px] mx-auto"></div>
 
     {{-- Contact Form --}}
     @include('components.contact-form')
