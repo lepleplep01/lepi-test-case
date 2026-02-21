@@ -5,14 +5,14 @@
     {{-- Hero Section --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <section class="bg-white pt-[200px] pb-20 md:pb-24">
+    <section class="bg-gray-50 pt-[200px] pb-18 md:pb-20">
         <div class="max-w-full mx-auto px-0">
             <div class="grid grid-cols-12 grid-rows-1 gap-2 mx-auto items-center">
 
                 <!-- KIRI -->
                 <div class="col-span-3 hidden md:flex justify-start mx-0 px-12">
                     <img src="https://bolehdicoba.com/wp-content/uploads/2024/06/Group-40451-1.png"
-                        class="w-full max-w-[263px] object-contain">
+                        class="w-full max-w-full object-contain">
                 </div>
 
                 <!-- TENGAH -->
@@ -22,7 +22,7 @@
                     </h6>
 
                     <h1
-                        class="font-outfitserif text-[64px] md:text-[54px] font-semibold text-[#222] leading-[1.15] mb-6 max-w-2xl mx-auto">
+                        class="font-outfitserif text-[64px] md:text-[65px] font-semibold text-[#222] leading-[1.15] mb-6 max-w-2xl mx-auto">
                         Expand your brand through measurable Digital Strategies
                     </h1>
 
@@ -46,7 +46,7 @@
                 <!-- KANAN -->
                 <div class="col-span-3 hidden md:flex justify-end mx-0 px-12">
                     <img src="https://bolehdicoba.com/wp-content/uploads/2024/06/Group-40452-1.png"
-                        class="w-full max-w-[257px] object-contain">
+                        class="w-full max-w-full object-contain">
                 </div>
 
             </div>
@@ -55,7 +55,7 @@
 
 
     {{-- Client Logos Section --}}
-    <section class="pt-6 md:pt-10 pb-20 md:pb-24 bg-white border-bdd-dark" x-data="{ activeTab: 'fashion' }">
+    <section class="pt-6 md:pt-10 pb-20 md:pb-24 bg-gray-50 border-bdd-dark" x-data="{ activeTab: 'fashion' }">
         <div class="max-w-full mx-auto px-10">
             <div class="bg-white rounded-3xl border-1 border-bdd-dark p-8 md:p-15 overflow-hidden relative">
                 <h3 class="font-outfitserif text-2xl md:text-[1.5rem] text-center text-[#222] mb-10">Over <span
@@ -252,7 +252,7 @@
 
 
     {{-- Stats / We On Numbers --}}
-    <section class="py-10 md:py-10 bg-[#f7f4f2]">
+    <section class="py-10 md:py-10 bg-gray-50">
         <div class="max-w-[1200px] mx-auto px-4">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
                 <div class="text-left pt-3">
@@ -530,7 +530,7 @@
     <x-achievements-custom />
 
     {{-- Why Choose Us --}}
-    <section class="py-16 md:py-20 bg-white">
+    <section class="py-16 md:py-20 bg-gray-50">
         <div class="max-w-full mx-auto px-4">
             {{-- Flexbox dengan items-center untuk vertikal tengah --}}
             <div class="flex flex-col lg:flex-row items-center gap-4 lg:gap-8">
@@ -548,12 +548,12 @@
                     </p>
 
                     {{-- KURANGI margin bottom --}}
-                    <h2 class="font-outfit text-[28px] md:text-[32px] lg:text-[34px] text-[#222] mb-3 leading-[1.2]">
+                    <h2 class="font-outfit text-[35px] md:text-[32px] lg:text-[40px] text-[#222] mb-3 leading-[1.2]">
                         It's not about how much budget you spent, but how you spend them.
                     </h2>
 
                     {{-- KURANGI margin bottom --}}
-                    <p class="font-outfit text-[#666] text-[14px] md:text-[15px] mb-4 leading-[1.5]">
+                    <p class="font-outfit text-bdd-dark text-[14px] md:text-[13px] mb-4 leading-[1.5]">
                         Embracing a focus of sustainable growth, we prioritise cultivating long-term partnerships, ensuring
                         your brand’s growth aligns with effective practices. Together, we create a positive impact that goes
                         beyond immediate gains, making a meaningful difference in the lives of your customers and the market
@@ -592,16 +592,16 @@
 
                                 {{-- KURANGI padding vertical --}}
                                 <button @click="active = active === {{ $i }} ? null : {{ $i }}"
-                                    class="flex items-center w-full py-1 px-4 text-left group transition-all duration-200 relative">
+                                    class="flex items-center w-full py-3 px-6 text-left group transition-all duration-200 relative">
                                     {{-- KURANGI gap --}}
-                                    <div class="flex items-center gap-3">
+                                    <div class="flex items-center gap-6">
                                         {{-- PERKECIL ukuran icon --}}
-                                        <div class="w-[32px] h-[32px] flex items-center justify-center flex-shrink-0 transition-transform duration-300"
+                                        <div class="w-[40px] h-[40px] flex items-center justify-center flex-shrink-0 transition-transform duration-300"
                                             :class="active === {{ $i }} && 'scale-110'">
                                             <img src="{{ $item[1] }}" alt="{{ $item[0] }}"
                                                 class="w-full h-full object-contain">
                                         </div>
-                                        <h4 class="font-outfit font-semibold text-[#1a1a1a] text-[14px] md:text-[15px] transition-colors duration-200 leading-tight"
+                                        <h4 class="font-outfit text-[#1a1a1a] text-[16px] md:text-[18px] transition-colors duration-200 leading-tight"
                                             :class="active === {{ $i }} && 'text-[#4A90E2]'">
                                             {{ $item[0] }}
                                         </h4>
@@ -619,7 +619,7 @@
                                     {{-- KURANGI padding kiri --}}
                                     <div class="px-4 pb-2 pt-0">
                                         <p
-                                            class="font-outfit text-[13px] md:text-[14px] text-[#666] leading-[1.5] pl-[44px]">
+                                            class="font-outfit text-[13px] md:text-[16px] text-[#666] leading-[1.5] pl-[44px]">
                                             {{ $item[2] }}
                                         </p>
                                     </div>
@@ -640,7 +640,7 @@
 
     {{-- Services with Sticky Card Stacking Animation --}}
 
-    <section class="py-20 md:py-24 bg-white" id="services-section">
+    <section class="py-20 md:py-24 bg-gray-50" id="services-section">
         <div class="max-w-full mx-auto px-12">
             <!-- Flex container: 2 kolom -->
             <div class="max-w-full flex flex-row justify-center items-center">
@@ -648,13 +648,13 @@
                 <div class="w-full flex flex-row md:flex-row md:justify-between gap-8 px-12 md:px-24 my-8">
 
                     <!-- Bagian Kiri: OUR SERVICES + Heading (tetap di atas) -->
-                    <div class="text-left w-1/2">
+                    <div class="text-left w-1/2 mx-auto pl-10 md:pl-13">
                         <p
                             class="font-outfitserif text-bdd-dark[#7B6CC4] text-xs font-semibold uppercase tracking-[0.2em] mb-4 scroll-animate">
                             OUR SERVICES
                         </p>
                         <h3
-                            class="font-outfitserif text-2xl md:text-[2.6rem] text-[#111] leading-tight mb-3 scroll-animate">
+                            class="font-outfitserif text-2xl md:text-[2.5rem] text-[#111] leading-tight mb-3 scroll-animate">
                             We Offer a Wide Services<br>
                             Aimed to Support your<br>
                             Business
@@ -663,7 +663,7 @@
 
                     <!-- Bagian Kanan: Deskripsi dengan margin-top agar lebih turun -->
                     <div class="flex items-end text-left w-1/2">
-                        <p class="font-outfitserif text-[#222] text-xm leading-relaxed scroll-animate md:mt-30">
+                        <p class="font-outfitserif text-[#222] text-md leading-relaxed scroll-animate md:mt-30">
                             It may surprise you, but digital marketing is not a single strategy,</br>
                             it covers a lot of spectrum, but don't worry, we got you!
                         </p>
@@ -728,7 +728,7 @@
                 @endphp
                 @foreach ($services as $idx => $s)
                     <div class="service-sticky-card mb-6"
-                        style="background: {{ $s[4] }}; top: {{ 90 + $idx * 20 }}px; z-index: {{ 10 + $idx }};"
+                        style="background: {{ $s[4] }}; top: 90px; z-index: {{ 10 + $idx }};"
                         data-card-index="{{ $idx }}">
                         <div class="grid grid-cols-1 md:grid-cols-2 items-center min-h-[350px] md:min-h-[420px]">
                             {{-- Text side --}}
@@ -761,6 +761,7 @@
             </div>
         </div>
     </section>
+    <div class="border-t border-black/100"></div>
 
 
     <!-- Custom Style untuk Pagination -->
@@ -786,21 +787,23 @@
     </style>
 
     <!-- Our Space Section -->
-    <section class="py-20 md:py-24 bg-white">
-        <div class="max-w-full mx-auto px-50">
-            <h2 class="font-outfitserif text-[40px] md:text-[2rem] text-[#222] text-center mb-3">Our Space - Where Ideas
-                Take Flight
-            </h2>
-            <p class="font-outfit text-[#666] text-lg max-w-lg mx-auto mt-1 text-center leading-relaxed">Step into BDD's Agency — where
-                strategy meets imagination. A space designed for collaboration, innovation, and bringing bold ideas to life.
+    <section class="py-20 md:py-24 bg-gray-50">
+        <div class="max-w-[1320px] mx-auto px-6 md:px-16">
+            <h2 class="font-outfitserif text-3xl md:text-[2.2rem] font-normal text-[#222] text-center mb-6">Our Space -
+                Where Ideas Take Flight</h2>
+            <p
+                class="font-outfitserif text-[#444] text-sm md:text-base max-w-xl mx-auto text-center leading-relaxed mb-16">
+                Step into BDD's Agency—where strategy meets imagination.<br class="hidden md:block">
+                A space designed for collaboration, innovation,<br class="hidden md:block">
+                and bringing bold ideas to life.
             </p>
 
             <!-- Swiper Container -->
-            <div class="swiper mySwiper">
+            <div class="swiper spaceSwiper overflow-hidden">
                 <div class="swiper-wrapper">
                     @foreach (['K65C5783', 'K65C6068', 'K65C7243', 'K65C7343', 'K65C5474', 'rgqymvpzefbfms03pbfj', 'grzuzsktcxecllzxxr6r', 'eeeqhfqzu3t14ddvxkkl'] as $img)
                         <div class="swiper-slide">
-                            <div class="aspect-rectangle overflow-hidden rounded-sm">
+                            <div class="aspect-video overflow-hidden">
                                 <img src="https://bolehdicoba.com/wp-content/uploads/2025/02/{{ $img }}-scaled.webp"
                                     alt="BDD Office"
                                     class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
@@ -809,36 +812,32 @@
                     @endforeach
                 </div>
 
-                <!-- Pagination (dots) di dalam container, tapi dengan CSS diatur ke bawah -->
-                <div class="swiper-pagination"></div>
+                <!-- Pagination (dots) -->
+                <div class="swiper-pagination bottom-0! pt-10!"></div>
             </div>
         </div>
     </section>
+    <div class="border-t border-black/100"></div>
 
-    <!-- Initialize Swiper -->
+    <!-- Initialize Swiper untuk Our Space -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            new Swiper('.mySwiper', {
-                slidesPerView: 1,
-                spaceBetween: 10,
-                loop: false, // tidak loop agar pagination sesuai jumlah slide
+            new Swiper('.spaceSwiper', {
+                slidesPerView: 1.2,
+                spaceBetween: 4,
+                loop: true,
                 pagination: {
                     el: '.swiper-pagination',
-                    clickable: true, // dots bisa diklik
+                    clickable: true,
                 },
-                // Tidak ada navigation, tidak ada autoplay
                 breakpoints: {
                     640: {
-                        slidesPerView: 2,
-                        spaceBetween: 12,
-                    },
-                    768: {
-                        slidesPerView: 3,
-                        spaceBetween: 16,
+                        slidesPerView: 2.2,
+                        spaceBetween: 8,
                     },
                     1024: {
-                        slidesPerView: 4,
-                        spaceBetween: 20,
+                        slidesPerView: 3,
+                        spaceBetween: 16,
                     },
                 }
             });
@@ -872,20 +871,23 @@
     </style>
 
     <!-- Live Studio Section dengan Swiper -->
-    <section class="py-20 md:py-24 bg-[#f7f4f2]">
-        <div class="max-w-full mx-auto px-50">
-            <h2 class="font-outfitserif text-2xl md:text-[2rem] text-[#222] text-center mb-3">Our Live Studio – Lights,
-                Camera, Conversion!</h2>
-            <p class="font-outfit text-[#666] text-lg max-w-2xl mx-auto mt-1 text-center leading-relaxed">BDD's state-of-the-art studio is
-                built for high-impact live streaming and content production. From brands to creators, we turn every session
-                into a performance that sells.</p>
+    <section class="py-20 md:py-24 bg-gray-50">
+        <div class="max-w-[1320px] mx-auto px-6 md:px-16">
+            <h2 class="font-outfitserif text-3xl md:text-[2.5rem] font-normal text-[#222] text-center mb-6">Our Live Studio
+                – Lights, Camera, Conversion!</h2>
+            <p
+                class="font-outfitserif text-[#444] text-base md:text-[1.1rem] max-w-2xl mx-auto text-center leading-relaxed mb-12">
+                BDD’s state-of-the-art studio is built for high-impact live<br class="hidden md:block">
+                streaming and content production. From brands to creators, we<br class="hidden md:block">
+                turn every session into a performance that sells.
+            </p>
 
             <!-- Swiper Container -->
-            <div class="swiper liveSwiper">
+            <div class="swiper liveSwiper overflow-hidden">
                 <div class="swiper-wrapper">
                     @foreach (['rpjytqsehhtnzfuubk5h', 'ai30bdaygyygklwd0qzo', 'hszihff55j6xx2lriyly', 'kqczncp8weskziezifev', 'lynpf4051tpbo6imi2jb', 'm3hibq7thfioruqzkbrk', 'm5r9ehqcse4ryvnxyybj', 'owfdizawyrmrrzenlpf6', 'vh4optmciqrjpqm2eyc2', 'wzbisivbh2k6sqiejtes'] as $img)
                         <div class="swiper-slide">
-                            <div class="aspect-square overflow-hidden rounded-sm">
+                            <div class="aspect-square overflow-hidden">
                                 <img src="https://bolehdicoba.com/wp-content/uploads/2025/02/{{ $img }}-scaled.webp"
                                     alt="BDD Studio"
                                     class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
@@ -893,38 +895,30 @@
                         </div>
                     @endforeach
                 </div>
-
                 <!-- Pagination (dots) -->
-                <div class="swiper-pagination"></div>
+                <div class="swiper-pagination bottom-0! pt-8!"></div>
             </div>
         </div>
     </section>
-
-    <!-- Swiper JS (pastikan sudah ada di footer) -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- Initialize Swiper untuk Live Studio -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             new Swiper('.liveSwiper', {
-                slidesPerView: 2, // mobile: 2 slide (sesuai grid-cols-2 asli)
-                spaceBetween: 12,
-                loop: false,
+                slidesPerView: 1.2,
+                spaceBetween: 4,
+                loop: true,
                 pagination: {
                     el: '.swiper-pagination',
                     clickable: true,
                 },
                 breakpoints: {
                     640: {
-                        slidesPerView: 2,
-                        spaceBetween: 12,
-                    },
-                    768: {
-                        slidesPerView: 3, // tablet: 3 slide
-                        spaceBetween: 16,
+                        slidesPerView: 2.2,
+                        spaceBetween: 6,
                     },
                     1024: {
-                        slidesPerView: 4, // desktop: 4 slide (bisa diubah ke 5 jika mau)
+                        slidesPerView: 3,
                         spaceBetween: 20,
                     },
                 }
@@ -932,14 +926,17 @@
         });
     </script>
 
+
+
+    <div class="border-t border-black/100"></div>
     {{-- Programs --}}
-    <section class="py-20 md:py-24 bg-[#f7f4f2]">
-        <div class="max-w-full mx-auto px-4">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+    <section class="py-20 md:py-24 bg-gray-50">
+        <div class="max-w-[1240px] mx-auto px-4 md:px-12 lg:pl-32">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center">
                 <div>
-                    <p class="font-outfitserif text-bdd-green text-xs font-semibold uppercase tracking-[0.2em] mb-3">OUR
+                    <p class="font-outfitserif text-bdd-dark text-xs font-semibold uppercase tracking-[0.2em] mb-3">OUR
                         PROGRAM</p>
-                    <h3 class="font-outfitserif text-2xl md:text-[1.85rem] text-[#222] mb-4 leading-snug">We Offer More
+                    <h3 class="font-outfitserif text-2xl md:text-[2.0rem] text-[#222] mb-4 leading-snug">We Offer More
                         Than
                         Meets The Eye</h3>
                     <p class="text-[#666] text-sm mb-8 leading-relaxed">As your go-to digital marketing partner to
@@ -994,24 +991,25 @@
                         @endforeach
                     </div>
                 </div>
-                <div>
+                <div class="flex justify-center lg:justify-start">
                     <img src="https://bolehdicoba.com/wp-content/uploads/2024/06/Group-40343-8.png" alt="Our Program"
-                        class="w-full rounded-2xl">
+                        class="w-full max-w-[500px] rounded-2xl">
                 </div>
             </div>
         </div>
     </section>
+    <div class="border-t border-black/100"></div>
 
 
     {{-- Case Studies --}}
     <section class="py-16 md:py-24 bg-white overflow-hidden">
-        <div class="max-w-full mx-auto px-4">
+        <div class="max-w-full mx-auto px-4 lg:pl-32">
             <div class="flex flex-col lg:flex-row gap-12 lg:gap-20">
                 <!-- Left Content: Title & Button -->
                 <div class="w-full lg:w-[32%] flex flex-col justify-center">
-                    <p class="font-outfitserif text-[#7b6cc4] text-[10px] font-bold uppercase tracking-[0.2em] mb-4">CASE
+                    <p class="font-outfitserif text-[#7b6cc4] text-[15px] uppercase tracking-[0.2em] mb-4">CASE
                         STUDY</p>
-                    <h3 class="font-outfitserif text-3xl md:text-[2.5rem] font-semibold text-[#222] leading-tight mb-10">
+                    <h3 class="font-outfitserif text-3xl md:text-[2.5rem]  text-[#222] leading-tight mb-10">
                         Explore more about our partner success stories</h3>
 
                     <a href="{{ route('case-study') }}"
@@ -1068,34 +1066,45 @@
                                 <div class="swiper-slide h-auto">
                                     <div
                                         class="bg-white rounded-xl overflow-hidden border border-[#222] transition-all h-full flex flex-col group">
-                                        <div class="relative h-60 overflow-hidden">
+                                        <div class="relative h-[200px] overflow-hidden">
                                             <img src="{{ $c['img'] }}" alt="Case Study"
                                                 class="w-full h-full object-cover">
-                                        </div>
-                                        <!-- Category Strip -->
-                                        <div class="bg-[#f7f4f2] py-2 text-center border-b border-[#222]">
-                                            <span
-                                                class="text-[10px] font-bold text-[#222] uppercase tracking-wider">{{ $c['cat'] }}</span>
-                                        </div>
-                                        <div class="p-6 grow flex flex-col gap-3">
-                                            <div class="h-8 flex items-center">
-                                                <img src="{{ $c['logo'] }}" alt="Logo"
-                                                    class="h-6 w-fit object-contain">
-                                            </div>
-                                            <h4
-                                                class="font-bold text-[1.1rem] text-[#222] leading-snug underline decoration-1 underline-offset-[6px] group-hover:text-bdd-blue transition-colors">
-                                                {{ $c['title'] }}</h4>
-                                            <p class="text-[13px] text-[#666] leading-relaxed grow">{{ $c['desc'] }}
-                                            </p>
-                                            <a href="#"
-                                                class="inline-flex items-center gap-1 text-sm font-bold text-[#222] hover:text-bdd-blue transition-all">
-                                                Read The Story
-                                                <svg class="w-4 h-4 translate-y-[-1px]" fill="none"
-                                                    stroke="currentColor" viewBox="0 0 24 24">
+                                            <!-- Floating Arrow -->
+                                            <div
+                                                class="absolute top-4 right-4 w-10 h-10 bg-white rounded-full border border-[#222] flex items-center justify-center shadow-[2px_2px_0px_#222]">
+                                                <svg class="w-5 h-5" fill="none" stroke="currentColor"
+                                                    viewBox="0 0 24 24">
                                                     <path stroke-linecap="round" stroke-linejoin="round"
                                                         stroke-width="2.5" d="M7 17L17 7M17 7H7M17 7V17" />
                                                 </svg>
-                                            </a>
+                                            </div>
+                                        </div>
+                                        <!-- Category Strip -->
+                                        <div class="bg-[#f7f4f2] py-2.5 text-center border-b border-[#222]">
+                                            <span
+                                                class="text-[11px] font-bold text-[#222] uppercase tracking-wider">{{ $c['cat'] }}</span>
+                                        </div>
+                                        <div class="p-6 grow flex flex-col gap-4">
+                                            <div class="h-10 flex items-center">
+                                                <img src="{{ $c['logo'] }}" alt="Logo"
+                                                    class="h-8 w-fit object-contain">
+                                            </div>
+                                            <h4
+                                                class="font-extrabold text-[1.2rem] text-[#222] leading-tight group-hover:text-bdd-blue transition-colors">
+                                                {{ $c['title'] }}</h4>
+                                            <p class="text-[14px] text-[#555] leading-relaxed grow">{{ $c['desc'] }}
+                                            </p>
+                                            <div class="pt-2">
+                                                <a href="#"
+                                                    class="inline-flex items-center gap-1.5 text-sm font-bold text-[#222] hover:text-bdd-blue transition-all">
+                                                    Read The Story
+                                                    <svg class="w-4 h-4 translate-y-[-1px]" fill="none"
+                                                        stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            stroke-width="2.5" d="M7 17L17 7M17 7H7M17 7V17" />
+                                                    </svg>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -1155,7 +1164,7 @@
                             slidesPerView: 1.5,
                         },
                         1024: {
-                            slidesPerView: 2.1,
+                            slidesPerView: 2.5,
                         }
                     },
                     on: {
@@ -1252,7 +1261,7 @@
                             slidesPerView: 1.5
                         },
                         1024: {
-                            slidesPerView: 3.2
+                            slidesPerView: 3
                         }
                     },
                     on: {
@@ -1323,7 +1332,7 @@
 
 
     {{-- Testimonials --}}
-    <section class="py-16 md:py-24 bg-[#f8f9fa] overflow-hidden">
+    <section class="py-16 md:py-24 bg-[#fcebff] overflow-hidden">
         <div class="max-w-[1200px] mx-auto px-4 text-center mb-16">
             <p class="font-outfitserif text-bdd-footer text-[10px] font-bold uppercase tracking-[0.2em] mb-4">FROM OUR
                 NOTABLE CLIENTS</p>
@@ -1394,18 +1403,18 @@
         <div class="flex mb-10">
             <div class="flex gap-6 animate-scroll hover:[animation-play-state:paused]">
                 @foreach (array_merge($row1, $row1) as $t)
-                    <div class="w-[320px] md:w-[450px] shrink-0">
+                    <div class="w-[350px] md:w-[600px] shrink-0">
                         <div
-                            class="bg-white rounded-xl p-8 border-2 border-[#222] shadow-[4px_4px_0px_#222] h-full flex flex-col hover:shadow-[2px_2px_0px_#222] hover:translate-x-[2px] hover:translate-y-[2px] transition-all">
-                            <div class="flex items-center gap-3 mb-4">
-                                <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-base"
+                            class="bg-white rounded-2xl p-10 md:p-14 border-[3px] border-[#222] shadow-[6px_6px_0px_#222] h-full flex flex-col hover:shadow-[3px_3px_0px_#222] hover:translate-x-[3px] hover:translate-y-[3px] transition-all">
+                            <div class="flex items-center gap-5 mb-6">
+                                <div class="w-14 h-14 rounded-full flex items-center justify-center text-white font-bold text-xl"
                                     style="background-color: {{ $t['c'] }};">
                                     {{ $t['i'] }}
                                 </div>
-                                <h5 class="font-bold text-[#222] text-sm">{{ $t['n'] }}</h5>
+                                <h5 class="font-extrabold text-[#222] text-lg">{{ $t['n'] }}</h5>
                             </div>
-                            <p class="text-[13px] text-[#555] italic leading-relaxed text-left grow">
-                                &ldquo;{{ $t['t'] }}&rdquo;
+                            <p class="text-base md:text-lg text-[#333] leading-[1.7] text-left grow">
+                                "{{ $t['t'] }}"
                             </p>
                         </div>
                     </div>
@@ -1417,18 +1426,18 @@
         <div class="flex">
             <div class="flex gap-6 animate-scroll-reverse hover:[animation-play-state:paused]">
                 @foreach (array_merge($row2, $row2) as $t)
-                    <div class="w-[320px] md:w-[450px] shrink-0">
+                    <div class="w-[400px] md:w-[600px] shrink-0">
                         <div
-                            class="bg-white rounded-xl p-8 border-2 border-[#222] shadow-[4px_4px_0px_#222] h-full flex flex-col hover:shadow-[2px_2px_0px_#222] hover:translate-x-[2px] hover:translate-y-[2px] transition-all">
-                            <div class="flex items-center gap-3 mb-4">
-                                <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-base"
+                            class="bg-white rounded-2xl p-10 md:p-14 border-[3px] border-[#222] shadow-[6px_6px_0px_#222] h-full flex flex-col hover:shadow-[3px_3px_0px_#222] hover:translate-x-[3px] hover:translate-y-[3px] transition-all">
+                            <div class="flex items-center gap-5 mb-6">
+                                <div class="w-14 h-14 rounded-full flex items-center justify-center text-white font-bold text-xl"
                                     style="background-color: {{ $t['c'] }};">
                                     {{ $t['i'] }}
                                 </div>
-                                <h5 class="font-bold text-[#222] text-sm">{{ $t['n'] }}</h5>
+                                <h5 class="font-extrabold text-[#222] text-lg">{{ $t['n'] }}</h5>
                             </div>
-                            <p class="text-[13px] text-[#555] italic leading-relaxed text-left grow">
-                                &ldquo;{{ $t['t'] }}&rdquo;
+                            <p class="text-base md:text-lg text-[#333] leading-[1.7] text-left grow">
+                                "{{ $t['t'] }}"
                             </p>
                         </div>
                     </div>
@@ -1474,13 +1483,12 @@
             <!-- Header Content: Title & Action Button -->
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
                 <div>
-                    <p class="font-outfitserif text-bdd-green text-[10px] font-bold uppercase tracking-[0.2em] mb-4">NEWS &
+                    <p class="font-outfitserif text-bdd-gray text-[15px] uppercase tracking-[0.2em] mb-4">NEWS &
                         BLOG</p>
-                    <h3 class="font-outfitserif text-3xl md:text-[2.5rem] font-semibold text-[#222] leading-tight mb-4">
-                        The Hub of Innovation and Creativity
+                    <h3 class="font-outfitserif text-xl md:text-[2.0rem] font-semibold text-[#222] leading-tight mb-4">
+                        Your time is valuable.
+                        <br>Read our insightful article within 5 minutes.</br>
                     </h3>
-                    <p class="font-outfitserif text-[#666] text-sm max-w-xl">Stay up-to-date with our latest findings and
-                        discoveries in digital marketing industry, business management, and brand growth strategies.</p>
                 </div>
                 <div class="shrink-0">
                     <a href="{{ route('news-blog') }}" class="btn-primary group">
@@ -1529,8 +1537,8 @@
                         @foreach ($posts as $p)
                             <div class="swiper-slide h-auto">
                                 <div
-                                    class="bg-white min-h-[370px] rounded-2xl overflow-hidden border-2 border-[#222] shadow-[4px_4px_0px_#222] hover:shadow-[1px_1px_0px_#222] hover:translate-x-[3px] hover:translate-y-[3px] transition-all h-full flex flex-col group">
-                                    <div class="h-40 overflow-hidden relative">
+                                    class="bg-white min-h-[550px] rounded-2xl overflow-hidden border-[3px] border-[#222] shadow-[8px_8px_0px_#222] hover:shadow-[3px_3px_0px_#222] hover:translate-x-[5px] hover:translate-y-[5px] transition-all h-full flex flex-col group">
+                                    <div class="h-64 overflow-hidden relative">
                                         <img src="{{ $p[3] }}" alt="{{ $p[1] }}"
                                             class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
                                         <div class="absolute top-3 left-3">
@@ -1539,20 +1547,20 @@
                                                 ARTICLE</span>
                                         </div>
                                     </div>
-                                    <div class="p-5 flex flex-col grow">
-                                        <span class="text-[9px] text-[#999] mb-2">{{ $p[0] }}</span>
+                                    <div class="p-10 flex flex-col grow">
+                                        <span class="text-xs text-[#999] mb-3">{{ $p[0] }}</span>
                                         <h4
-                                            class="font-outfitserif font-bold text-sm text-[#222] mb-2 leading-snug group-hover:text-bdd-blue transition-colors line-clamp-2">
+                                            class="font-outfitserif font-bold text-xl md:text-[1.3rem] text-[#222] mb-3 leading-snug group-hover:text-bdd-blue transition-colors line-clamp-2">
                                             {{ $p[1] }}
                                         </h4>
-                                        <p class="text-[12px] text-[#666] line-clamp-3 mb-4 leading-relaxed">
+                                        <p class="text-sm text-[#666] line-clamp-3 mb-6 leading-relaxed">
                                             {{ $p[2] }}
                                         </p>
                                         <div class="mt-auto pt-3 border-t border-gray-100">
                                             <a href="{{ route('news-blog') }}"
-                                                class="inline-flex items-center gap-1.5 text-[11px] font-bold text-[#222] hover:text-bdd-blue transition-colors group/link">
+                                                class="inline-flex items-center gap-2 text-sm font-bold text-[#222] hover:text-bdd-blue transition-colors group/link">
                                                 Read More
-                                                <svg class="w-3 h-3 transform group-hover/link:translate-x-1 transition-transform"
+                                                <svg class="w-4 h-4 transform group-hover/link:translate-x-1 transition-transform"
                                                     fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path stroke-linecap="round" stroke-linejoin="round"
                                                         stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3" />
