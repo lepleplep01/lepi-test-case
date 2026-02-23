@@ -1332,7 +1332,7 @@
 
 
     {{-- Testimonials --}}
-    <section class="py-16 md:py-24 bg-[#fcebff] overflow-hidden">
+    <section class="py-16 md:py-24 bg-[#e8e3f0] overflow-hidden">
         <div class="max-w-[1200px] mx-auto px-4 text-center mb-16">
             <p class="font-outfitserif text-bdd-footer text-[10px] font-bold uppercase tracking-[0.2em] mb-4">FROM OUR
                 NOTABLE CLIENTS</p>
