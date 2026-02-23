@@ -5,7 +5,7 @@
     {{-- Hero Section --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <section class="bg-gray-50 pt-[200px] pb-18 md:pb-20">
+    <section class="bg-gray-50 pt-32 md:pt-[200px] pb-18 md:pb-20">
         <div class="max-w-full mx-auto px-0">
             <div class="grid grid-cols-12 grid-rows-1 gap-2 mx-auto items-center">
 
@@ -16,13 +16,13 @@
                 </div>
 
                 <!-- TENGAH -->
-                <div class="col-span-6 text-center px-4">
+                <div class="col-span-12 md:col-span-6 text-center px-4">
                     <h6 class="font-outfitserif text-bdd-footer text-[18px] mb-5">
                         GROW WITH US
                     </h6>
 
                     <h1
-                        class="font-outfitserif text-[64px] md:text-[65px] font-semibold text-[#222] leading-[1.15] mb-6 max-w-2xl mx-auto">
+                        class="font-outfitserif text-[32px] md:text-[65px] font-semibold text-[#222] leading-[1.2] md:leading-[1.15] mb-6 max-w-2xl mx-auto">
                         Expand your brand through measurable Digital Strategies
                     </h1>
 
@@ -34,13 +34,16 @@
                         by exploring actionable possibilities.
                     </p>
 
-                    <a href="{{ route('about') }}" class="btn-primary">
-                        <span>Get to Know Us!</span>
-                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 13 20">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                    </a>
+                    <div class="flex justify-center">
+                        <a href="{{ route('about') }}"
+                            class="inline-flex items-center gap-2 bg-[#FDB042] text-[#222] font-bold text-sm px-8 py-3.5 border-2 border-[#222] rounded-xl shadow-[4px_4px_0px_#222] hover:shadow-[1px_1px_0px_#222] hover:translate-x-[2px] hover:translate-y-[2px] transition-all">
+                            <span>Get to Know Us!</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="2.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </a>
+                    </div>
                 </div>
 
                 <!-- KANAN -->
@@ -50,22 +53,39 @@
                 </div>
 
             </div>
-
     </section>
+    <div class="border-t border-black/100"></div>
 
 
     {{-- Client Logos Section --}}
-    <section class="pt-6 md:pt-10 pb-20 md:pb-24 bg-gray-50 border-bdd-dark" x-data="{ activeTab: 'fashion' }">
-        <div class="max-w-full mx-auto px-10">
-            <div class="bg-white rounded-3xl border-1 border-bdd-dark p-8 md:p-15 overflow-hidden relative">
-                <h3 class="font-outfitserif text-2xl md:text-[1.5rem] text-center text-[#222] mb-10">Over <span
-                        class="font-outfitserif  text-bdd-green">800+</span> Business growing with Boleh Dicoba Digital</h3>
-                <div class="flex items-center justify-center gap-4 md:gap-8 border-b border-gray-200 mb-10 pb-0">
+    <section class="pt-10 md:pt-10 pb-16 md:pb-24 bg-white md:bg-gray-50" x-data="{ activeTab: 'fashion' }">
+        <div class="max-w-full mx-auto px-0 md:px-10">
+            <div class="bg-white md:rounded-3xl md:border-[3px] border-[#222] p-6 md:p-15 overflow-hidden relative">
+                <div class="border-t border-gray-100 absolute top-0 left-0 w-full hidden md:block"></div>
+
+                <h3
+                    class="font-outfitserif text-[24px] md:text-[2rem] font-medium text-center text-[#222] mt-4 mb-10 leading-[1.3] md:leading-snug">
+                    Over <span class="text-[#00B69B] font-bold">800+</span> Business growing with<br>
+                    Boleh Dicoba Digital
+                </h3>
+
+                <div
+                    class="flex items-center justify-start md:justify-center gap-6 md:gap-12 border-b border-gray-100 mb-12 pb-0 overflow-x-auto no-scrollbar px-2 md:px-0">
                     @foreach (['fashion' => 'Fashion', 'fnb' => 'FnB', 'beauty' => 'Beauty', 'lifestyle' => 'Lifestyle', 'startup' => 'Startup & Other', 'corporate' => 'FMCGs & Corporations'] as $k => $v)
-                        <button @click="activeTab='{{ $k }}'"
-                            :class="activeTab === '{{ $k }}' ? 'border-bdd-blue text-bdd-blue' :
-                                'border-transparent text-[#888] hover:text-[#222]'"
-                            class="pb-3 text-[18px] font-medium border-b-2 whitespace-nowrap transition">{{ $v }}</button>
+                        <button
+                            @click="activeTab='{{ $k }}'; $nextTick(() => { 
+                            if($k === 'fashion') window.fashionSwiper?.update();
+                            if($k === 'fnb') window.fnbSwiper?.update();
+                            if($k === 'beauty') window.beautySwiper?.update();
+                            if($k === 'lifestyle') window.lifestyleSwiper?.update();
+                            if($k === 'startup') window.startupSwiper?.update();
+                            if($k === 'corporate') window.corporateSwiper?.update();
+                        })"
+                            :class="activeTab === '{{ $k }}' ? 'border-[#5B84C4] text-[#5B84C4]' :
+                                'border-transparent text-[#999] hover:text-[#222]'"
+                            class="pb-4 text-[16px] md:text-[18px] font-semibold border-b-[3px] whitespace-nowrap transition-all duration-300">
+                            {{ $v }}
+                        </button>
                     @endforeach
                 </div>
 
@@ -73,8 +93,8 @@
                 <div x-show="activeTab==='fashion'" x-transition x-data x-init="$nextTick(() => {
                     if (!window.fashionSwiper) {
                         window.fashionSwiper = new Swiper('.fashionSwiper', {
-                            slidesPerView: '6',
-                            spaceBetween: 15,
+                            slidesPerView: 'auto',
+                            spaceBetween: 30,
                             loop: true,
                             speed: 5000,
                             autoplay: {
@@ -83,16 +103,20 @@
                             },
                             freeMode: true,
                             freeModeMomentum: false,
+                            observer: true,
+                            observeParents: true,
                         });
+                    } else {
+                        window.fashionSwiper.update();
                     }
                 })"
-                    class="swiper-container fashionSwiper py-4">
+                    class="swiper fashionSwiper py-4">
                     <div class="swiper-wrapper">
                         @foreach (['Hoops', 'M231', 'calla', 'love-fair', 'cottonink', 'eiger', 'MKS-1', 'Spotec', 'brodo', 'Jiniso', 'dauky', 'elzatta', 'mayoutfit', 'Viola', 'Ripcurl', 'NCR', 'CRSL', 'Sophie-Martin'] as $logo)
                             <div class="swiper-slide flex justify-center items-center w-auto">
                                 <img src="https://bolehdicoba.com/wp-content/uploads/2024/03/Property-1{{ $logo }}.png"
                                     alt="{{ $logo }}"
-                                    class="h-10 md:h-12 object-contain opacity-100 hover:opacity-100 transition">
+                                    class="h-14 md:h-12 object-contain opacity-100 hover:opacity-100 transition duration-500">
                             </div>
                         @endforeach
                     </div>
@@ -103,26 +127,29 @@
                 <div x-show="activeTab==='fnb'" x-transition x-data x-init="$nextTick(() => {
                     if (!window.fnbSwiper) {
                         window.fnbSwiper = new Swiper('.fnbSwiper', {
-                            slidesPerView: '3', // otomatis sesuai lebar logo
-                            spaceBetween: 10,
-                            loop: true, // terus berulang
+                            slidesPerView: 'auto',
+                            spaceBetween: 30,
+                            loop: true,
                             speed: 5000,
                             autoplay: {
-                                delay: 0, // tanpa jeda
+                                delay: 0,
                                 disableOnInteraction: false
                             },
                             freeMode: true,
-                            freeModeMomentum: false
+                            freeModeMomentum: false,
+                            observer: true,
+                            observeParents: true,
                         });
+                    } else {
+                        window.fnbSwiper.update();
                     }
-                })"
-                    class="swiper-container fnbSwiper py-4">
+                })" class="swiper fnbSwiper py-4">
                     <div class="swiper-wrapper">
                         @foreach (['Sukha', 'Holycow', 'Richeese', 'Boca-Rica', 'Primaflakes'] as $logo)
                             <div class="swiper-slide flex justify-center items-center w-auto">
                                 <img src="https://bolehdicoba.com/wp-content/uploads/2024/03/Property-1{{ $logo }}.png"
                                     alt="{{ $logo }}"
-                                    class="h-10 md:h-12 object-contain opacity-100 hover:opacity-100 transition">
+                                    class="h-14 md:h-12 object-contain opacity-100 hover:opacity-100 transition duration-500">
                             </div>
                         @endforeach
                     </div>
@@ -133,26 +160,30 @@
                 <div x-show="activeTab==='beauty'" x-transition x-data x-init="$nextTick(() => {
                     if (!window.beautySwiper) {
                         window.beautySwiper = new Swiper('.beautySwiper', {
-                            slidesPerView: '6', // lebar otomatis sesuai logo
-                            spaceBetween: 10, // jarak antar logo
-                            loop: true, // loop terus-menerus
-                            speed: 5000, // kecepatan scroll
+                            slidesPerView: 'auto',
+                            spaceBetween: 30,
+                            loop: true,
+                            speed: 5000,
                             autoplay: {
-                                delay: 0, // scroll terus tanpa jeda
+                                delay: 0,
                                 disableOnInteraction: false
                             },
-                            freeMode: true, // smooth scroll continuous
-                            freeModeMomentum: false // hentikan momentum agar scroll konsisten
+                            freeMode: true,
+                            freeModeMomentum: false,
+                            observer: true,
+                            observeParents: true,
                         });
+                    } else {
+                        window.beautySwiper.update();
                     }
                 })"
-                    class="swiper-container beautySwiper py-4">
+                    class="swiper beautySwiper py-4">
                     <div class="swiper-wrapper">
                         @foreach (['Npure', 'Studio-Tropik', 'ESQA', 'shinzui', 'evangeline', 'HMNS', 'Kitshy', 'Kiva', 'dear-me-beauty', 'rose-all-day', 'elsheskin', 'hayyu-clinic', 'nadifa-clinic', 'layr', 'fordive', 'emina', 'BG-Skin'] as $logo)
-                            <div class="swiper-slide inline-flex items-center w-auto">
+                            <div class="swiper-slide flex justify-center items-center w-auto">
                                 <img src="https://bolehdicoba.com/wp-content/uploads/2024/03/Property-1{{ $logo }}.png"
                                     alt="{{ $logo }}"
-                                    class="h-10 md:h-12 w-auto object-contain opacity-100 hover:opacity-100 transition">
+                                    class="h-14 md:h-12 w-auto object-contain opacity-100 hover:opacity-100 transition duration-500">
                             </div>
                         @endforeach
                     </div>
@@ -163,26 +194,30 @@
                 <div x-show="activeTab==='lifestyle'" x-transition x-data x-init="$nextTick(() => {
                     if (!window.lifestyleSwiper) {
                         window.lifestyleSwiper = new Swiper('.lifestyleSwiper', {
-                            slidesPerView: '6', // jumlah logo terlihat
-                            spaceBetween: 10, // jarak antar logo
-                            loop: true, // carousel terus berulang
-                            speed: 5000, // kecepatan scroll
+                            slidesPerView: 'auto',
+                            spaceBetween: 30,
+                            loop: true,
+                            speed: 5000,
                             autoplay: {
-                                delay: 0, // scroll terus tanpa jeda
+                                delay: 0,
                                 disableOnInteraction: false
                             },
-                            freeMode: true, // smooth scroll continuous
-                            freeModeMomentum: false // hentikan momentum agar scroll konsisten
+                            freeMode: true,
+                            freeModeMomentum: false,
+                            observer: true,
+                            observeParents: true,
                         });
+                    } else {
+                        window.lifestyleSwiper.update();
                     }
                 })"
-                    class="swiper-container lifestyleSwiper py-4">
+                    class="swiper lifestyleSwiper py-4">
                     <div class="swiper-wrapper">
                         @foreach (['Domibed', 'UBS-lifestyle', 'Desty', 'Lotus-archi', 'Mom-Uung', 'mama-Bear', 'Moro', 'Eyesight', 'Satu-momen', 'Digimo', 'infarm', 'Seolmi', 'Slimsure', 'Moell'] as $logo)
-                            <div class="swiper-slide flex justify-center items-center">
+                            <div class="swiper-slide flex justify-center items-center w-auto">
                                 <img src="https://bolehdicoba.com/wp-content/uploads/2024/03/Property-1{{ $logo }}.png"
                                     alt="{{ $logo }}"
-                                    class="h-10 md:h-12 object-contain opacity-100 hover:opacity-100 transition">
+                                    class="h-14 md:h-12 object-contain opacity-100 hover:opacity-100 transition duration-500">
                             </div>
                         @endforeach
                     </div>
@@ -193,26 +228,30 @@
                 <div x-show="activeTab==='startup'" x-transition x-data x-init="$nextTick(() => {
                     if (!window.startupSwiper) {
                         window.startupSwiper = new Swiper('.startupSwiper', {
-                            slidesPerView: '6', // lebar otomatis sesuai logo
-                            spaceBetween: 15, // jarak antar logo
-                            loop: true, // scroll terus berulang
-                            speed: 5000, // kecepatan scroll
+                            slidesPerView: 'auto',
+                            spaceBetween: 30,
+                            loop: true,
+                            speed: 5000,
                             autoplay: {
-                                delay: 0, // scroll tanpa jeda
+                                delay: 0,
                                 disableOnInteraction: false
                             },
-                            freeMode: true, // smooth scroll continuous
-                            freeModeMomentum: false // hentikan momentum agar scroll konsisten
+                            freeMode: true,
+                            freeModeMomentum: false,
+                            observer: true,
+                            observeParents: true,
                         });
+                    } else {
+                        window.startupSwiper.update();
                     }
                 })"
-                    class="swiper-container startupSwiper py-4">
+                    class="swiper startupSwiper py-4">
                     <div class="swiper-wrapper">
                         @foreach (['Domibed', 'Prosleep', 'Hawkeye', 'kasanoa', 'UBS-lifestyle', 'Deltomed', 'Lotus-archi', 'Satu-momen', 'Ivory-Bridal', 'mahatex', 'Octopus', 'Eyesight', 'NP-Cunsult', 'Digitravel'] as $logo)
-                            <div class="swiper-slide inline-flex items-center w-auto">
+                            <div class="swiper-slide flex justify-center items-center w-auto">
                                 <img src="https://bolehdicoba.com/wp-content/uploads/2024/03/Property-1{{ $logo }}.png"
                                     alt="{{ $logo }}"
-                                    class="h-10 md:h-12 w-auto object-contain opacity-100 hover:opacity-100 transition">
+                                    class="h-14 md:h-12 w-auto object-contain opacity-100 hover:opacity-100 transition duration-500">
                             </div>
                         @endforeach
                     </div>
@@ -222,31 +261,36 @@
                 <div x-show="activeTab==='corporate'" x-transition x-data x-init="$nextTick(() => {
                     if (!window.corporateSwiper) {
                         window.corporateSwiper = new Swiper('.corporateSwiper', {
-                            slidesPerView: '6', // lebar otomatis sesuai logo
-                            spaceBetween: 15, // jarak antar logo
-                            loop: true, // scroll terus berulang
-                            speed: 5000, // kecepatan scroll
+                            slidesPerView: 'auto',
+                            spaceBetween: 30,
+                            loop: true,
+                            speed: 5000,
                             autoplay: {
-                                delay: 0, // scroll tanpa jeda
+                                delay: 0,
                                 disableOnInteraction: false
                             },
-                            freeMode: true, // smooth scroll continuous
-                            freeModeMomentum: false // hentikan momentum agar scroll konsisten
+                            freeMode: true,
+                            freeModeMomentum: false,
+                            observer: true,
+                            observeParents: true,
                         });
+                    } else {
+                        window.corporateSwiper.update();
                     }
                 })"
-                    class="swiper-container corporateSwiper py-4">
+                    class="swiper corporateSwiper py-4">
                     <div class="swiper-wrapper">
                         @foreach (['Axa', 'UNHCR', 'IDX', 'Logitech', 'tokocrypto', 'Gowork', 'Jobstreet', 'Grab', 'Djarum', 'Sidomuncul', 'Grand-duta', 'Sido-muncul-natural', 'deltomedd', 'Amoda', 'DNVB', 'Tsurvey', 'NPC-office', 'Kantor-Gunawa'] as $logo)
-                            <div class="swiper-slide inline-flex items-center w-auto">
+                            <div class="swiper-slide flex justify-center items-center w-auto">
                                 <img src="https://bolehdicoba.com/wp-content/uploads/2024/03/Property-1{{ $logo }}.png"
                                     alt="{{ $logo }}"
-                                    class="h-10 md:h-12 w-auto object-contain opacity-100 hover:opacity-100 transition">
+                                    class="h-14 md:h-12 w-auto object-contain opacity-100 hover:opacity-100 transition duration-500">
                             </div>
                         @endforeach
                     </div>
                 </div>
     </section>
+    <div class="border-t border-black/100"></div>
 
 
 
@@ -255,12 +299,14 @@
     <section class="py-10 md:py-10 bg-gray-50">
         <div class="max-w-[1200px] mx-auto px-4">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
-                <div class="text-left pt-3">
-                    <p class="text-bdd-gray text-xs font-semibold uppercase tracking-[0.2em] mb-4">WE ON NUMBERS</p>
+                <div class="text-center md:text-left pt-3">
+                    <p class="text-bdd-gray text-xs font-semibold uppercase tracking-[0.2em] mb-4 text-center md:text-left">
+                        WE ON NUMBERS</p>
                     <h3 class="font-outfitserif text-2xl md:text-[2.4rem] text-[#222] mb-4 leading-tight">We Establish an
                         Ecosystem to Enhance
                         Brand Growth.</h3>
-                    <p class="text-[#666] text-sm max-w-[38rem] mb-14 leading-relaxed">Beyond conventional marketing norms,
+                    <p class="text-[#666] text-sm max-w-[38rem] mx-auto md:mx-0 mb-14 leading-relaxed">Beyond
+                        conventional marketing norms,
                         we craft innovative strategies infused with data-driven insights to create comprehensive campaigns
                         that resonate with target audiences for 800+ clients.</p>
                 </div>
@@ -273,51 +319,45 @@
                                 'label' => '800+',
                                 'meta' => 'Clients Growing',
                                 'color' => '#8A7C9B',
-                                'col' => 'span 3',
-                                'row' => 'span 1',
+                                'class' => 'col-span-2 md:col-span-3',
                             ],
                             [
                                 'label' => '140+',
                                 'meta' => 'Teams of Professional',
                                 'color' => '#FFCB87',
-                                'col' => 'span 2',
-                                'row' => 'span 1',
+                                'class' => 'col-span-1 md:col-span-2',
                             ],
                             [
                                 'label' => '50+',
                                 'meta' => 'Meta & Google Certified Professional',
                                 'color' => '#88A7DA',
-                                'col' => 'span 2',
-                                'row' => 'span 1',
+                                'class' => 'col-span-1 md:col-span-2',
                             ],
                             [
                                 'label' => '400 Mio+',
                                 'meta' => 'Online Engagement Performance',
                                 'color' => '#76CFC3',
-                                'col' => 'span 3',
-                                'row' => 'span 1',
+                                'class' => 'col-span-2 md:col-span-3',
                             ],
                             [
                                 'label' => 'USD 15 Mio+',
                                 'meta' => 'Advertising Spend',
                                 'color' => '#FD8E85',
-                                'col' => 'span 3',
-                                'row' => 'span 1',
+                                'class' => 'col-span-2 md:col-span-3',
                             ],
                             [
                                 'label' => '+And',
                                 'meta' => 'Many More',
                                 'color' => '#EEE9DF',
-                                'col' => 'span 2',
-                                'row' => 'span 1',
+                                'class' => 'col-span-2 md:col-span-2',
                             ],
                         ];
                     @endphp
 
-                    <div class="grid grid-cols-5 gap-3">
+                    <div class="grid grid-cols-2 md:grid-cols-5 gap-3">
                         @foreach ($cards as $c)
-                            <div class="stat-card reveal-visible"
-                                style="grid-column: {{ $c['col'] }}; grid-row: {{ $c['row'] }}; --accent: {{ $c['color'] }};">
+                            <div class="stat-card reveal-visible {{ $c['class'] }}"
+                                style="--accent: {{ $c['color'] }};">
                                 <div class="stat-card-inner">
                                     <div class="stat-number font-outfitserif">{{ $c['label'] }}</div>
                                     <div class="stat-meta text-[11px] font-outfitserif text-[#666]">{{ $c['meta'] }}
@@ -407,7 +447,12 @@
         }
 
         .stat-card .stat-number {
-            font-size: 2.1rem;
+            font-size: 1.6rem;
+
+            @media (min-width: 768px) {
+                font-size: 2.1rem;
+            }
+
             font-weight: 700;
             color: #111;
             line-height: 1;
@@ -535,9 +580,9 @@
             {{-- Flexbox dengan items-center untuk vertikal tengah --}}
             <div class="flex flex-col lg:flex-row items-center gap-4 lg:gap-8">
                 {{-- Image Column - Proporsi 1/2 --}}
-                <div class="w-full lg:w-1/2 flex justify-end">
+                <div class="w-full lg:w-1/2 flex justify-center lg:justify-end">
                     <img src="https://bolehdicoba.com/wp-content/uploads/2024/06/Group-40343-7.png" alt="Why Choose Us"
-                        class="w-full max-w-md lg:max-w-lg h-auto rounded-xl m-0 p-0 block">
+                        class="w-full max-w-[320px] md:max-w-md lg:max-w-lg h-auto rounded-xl m-0 p-0 block">
                 </div>
 
                 {{-- Content Column - Proporsi 1/2 --}}
@@ -631,6 +676,7 @@
             </div>
         </div>
     </section>
+
     <style>
         [x-cloak] {
             display: none !important;
@@ -641,37 +687,35 @@
     {{-- Services with Sticky Card Stacking Animation --}}
 
     <section class="py-20 md:py-24 bg-gray-50" id="services-section">
-        <div class="max-w-full mx-auto px-12">
+        <div class="max-w-full mx-auto px-6 md:px-12">
             <!-- Flex container: 2 kolom -->
-            <div class="max-w-full flex flex-row justify-center items-center">
+            <div class="max-w-full flex flex-col md:flex-row justify-center items-center">
 
-                <div class="w-full flex flex-row md:flex-row md:justify-between gap-8 px-12 md:px-24 my-8">
+                <div class="w-full flex flex-col md:flex-row md:justify-between gap-8 px-4 md:px-24 my-8">
 
-                    <!-- Bagian Kiri: OUR SERVICES + Heading (tetap di atas) -->
-                    <div class="text-left w-1/2 mx-auto pl-10 md:pl-13">
+                    <!-- Bagian Kiri: OUR SERVICES + Heading -->
+                    <div class="text-center md:text-left w-full md:w-1/2">
                         <p
-                            class="font-outfitserif text-bdd-dark[#7B6CC4] text-xs font-semibold uppercase tracking-[0.2em] mb-4 scroll-animate">
+                            class="font-outfitserif text-[#7B6CC4] text-xs font-semibold uppercase tracking-[0.2em] mb-4 scroll-animate">
                             OUR SERVICES
                         </p>
                         <h3
                             class="font-outfitserif text-2xl md:text-[2.5rem] text-[#111] leading-tight mb-3 scroll-animate">
-                            We Offer a Wide Services<br>
-                            Aimed to Support your<br>
+                            We Offer a Wide Services<br class="hidden md:block">
+                            Aimed to Support your<br class="hidden md:block">
                             Business
                         </h3>
                     </div>
 
-                    <!-- Bagian Kanan: Deskripsi dengan margin-top agar lebih turun -->
-                    <div class="flex items-end text-left w-1/2">
-                        <p class="font-outfitserif text-[#222] text-md leading-relaxed scroll-animate md:mt-30">
-                            It may surprise you, but digital marketing is not a single strategy,</br>
+                    <!-- Bagian Kanan: Deskripsi -->
+                    <div class="flex items-center md:items-end text-left md:text-left w-full md:w-1/2">
+                        <p class="font-outfitserif text-[#222] text-sm md:text-md leading-relaxed scroll-animate md:mt-10">
+                            It may surprise you, but digital marketing is not a single strategy,<br>
                             it covers a lot of spectrum, but don't worry, we got you!
                         </p>
                     </div>
                 </div>
             </div>
-
-
             <div class="services-stack">
                 @php
                     $services = [
@@ -727,8 +771,8 @@
                     ];
                 @endphp
                 @foreach ($services as $idx => $s)
-                    <div class="service-sticky-card mb-6"
-                        style="background: {{ $s[4] }}; top: 90px; z-index: {{ 10 + $idx }};"
+                    <div class="service-sticky-card mb-6 sticky top-[80px] md:top-[90px]"
+                        style="background: {{ $s[4] }}; z-index: {{ 10 + $idx }};"
                         data-card-index="{{ $idx }}">
                         <div class="grid grid-cols-1 md:grid-cols-2 items-center min-h-[350px] md:min-h-[420px]">
                             {{-- Text side --}}
@@ -823,7 +867,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             new Swiper('.spaceSwiper', {
-                slidesPerView: 1.2,
+                slidesPerView: 1.1,
                 spaceBetween: 4,
                 loop: true,
                 pagination: {
@@ -905,7 +949,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             new Swiper('.liveSwiper', {
-                slidesPerView: 1.2,
+                slidesPerView: 1.1,
                 spaceBetween: 4,
                 loop: true,
                 pagination: {
@@ -1003,23 +1047,25 @@
 
     {{-- Case Studies --}}
     <section class="py-16 md:py-24 bg-white overflow-hidden">
-        <div class="max-w-full mx-auto px-4 lg:pl-32">
+        <div class="max-w-full mx-auto px-6 lg:pl-32">
             <div class="flex flex-col lg:flex-row gap-12 lg:gap-20">
-                <!-- Left Content: Title & Button -->
-                <div class="w-full lg:w-[32%] flex flex-col justify-center">
-                    <p class="font-outfitserif text-[#7b6cc4] text-[15px] uppercase tracking-[0.2em] mb-4">CASE
-                        STUDY</p>
-                    <h3 class="font-outfitserif text-3xl md:text-[2.5rem]  text-[#222] leading-tight mb-10">
+                <!-- Left Content: Title -->
+                <div class="w-full lg:w-[32%] flex flex-col justify-center text-center lg:text-left">
+                    <p class="font-outfitserif text-[#7b6cc4] text-[13px] md:text-[15px] uppercase tracking-[0.2em] mb-4">
+                        CASE STUDY</p>
+                    <h3 class="font-outfitserif text-2xl md:text-[2.5rem] text-[#222] leading-tight mb-8 lg:mb-10">
                         Explore more about our partner success stories</h3>
 
-                    <a href="{{ route('case-study') }}"
-                        class="inline-flex items-center justify-between gap-3 px-6 py-3.5 bg-bdd-gold text-[#222] font-bold text-sm border-2 border-[#222] rounded-lg shadow-[4px_4px_0px_#222] hover:shadow-[1px_1px_0px_#222] hover:translate-x-[2px] hover:translate-y-[2px] transition-all w-fit">
-                        See More Success Stories
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                    </a>
+                    <div class="hidden lg:block">
+                        <a href="{{ route('case-study') }}"
+                            class="inline-flex items-center justify-between gap-3 px-6 py-3.5 bg-bdd-gold text-[#222] font-bold text-sm border-2 border-[#222] rounded-lg shadow-[4px_4px_0px_#222] hover:shadow-[1px_1px_0px_#222] hover:translate-x-[2px] hover:translate-y-[2px] transition-all w-fit">
+                            See More Success Stories
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Right Content: Slider -->
@@ -1066,7 +1112,7 @@
                                 <div class="swiper-slide h-auto">
                                     <div
                                         class="bg-white rounded-xl overflow-hidden border border-[#222] transition-all h-full flex flex-col group">
-                                        <div class="relative h-[200px] overflow-hidden">
+                                        <div class="relative h-24 md:h-[200px] overflow-hidden">
                                             <img src="{{ $c['img'] }}" alt="Case Study"
                                                 class="w-full h-full object-cover">
                                             <!-- Floating Arrow -->
@@ -1084,10 +1130,10 @@
                                             <span
                                                 class="text-[11px] font-bold text-[#222] uppercase tracking-wider">{{ $c['cat'] }}</span>
                                         </div>
-                                        <div class="p-6 grow flex flex-col gap-4">
-                                            <div class="h-10 flex items-center">
+                                        <div class="p-3 md:p-6 grow flex flex-col gap-1 md:gap-2">
+                                            <div class="h-6 md:h-10 flex items-center">
                                                 <img src="{{ $c['logo'] }}" alt="Logo"
-                                                    class="h-8 w-fit object-contain">
+                                                    class="h-4 md:h-8 w-fit object-contain">
                                             </div>
                                             <h4
                                                 class="font-extrabold text-[1.2rem] text-[#222] leading-tight group-hover:text-bdd-blue transition-colors">
@@ -1146,6 +1192,19 @@
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <!-- Mobile Button - Only visible on mobile -->
+            <div class="mt-8 flex justify-center lg:hidden">
+                <a href="{{ route('case-study') }}"
+                    class="inline-flex items-center justify-between gap-3 px-6 py-3.5 bg-bdd-gold text-[#222] font-bold text-sm border-2 border-[#222] rounded-lg shadow-[4px_4px_0px_#222] hover:shadow-[1px_1px_0px_#222] hover:translate-x-[2px] hover:translate-y-[2px] transition-all w-full md:w-fit text-center">
+                    See More Success Stories
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                </a>
+            </div>
     </section>
 
     <script>
@@ -1326,6 +1385,27 @@
                     newsHandle.addEventListener('mousedown', startDrag);
                     newsHandle.addEventListener('touchstart', startDrag);
                 }
+                // Add Achievement Swiper with same behavior as Logos
+                new Swiper('.achievementSwiper', {
+                    slidesPerView: 'auto',
+                    spaceBetween: 30,
+                    loop: true,
+                    speed: 5000,
+                    autoplay: {
+                        delay: 0,
+                        disableOnInteraction: false
+                    },
+                    freeMode: true,
+                    freeModeMomentum: false,
+                    observer: true,
+                    observeParents: true,
+                    breakpoints: {
+                        768: {
+                            slidesPerView: 5,
+                            spaceBetween: 50
+                        }
+                    }
+                });
             }
         });
     </script>
@@ -1474,23 +1554,73 @@
         .animate-scroll-reverse {
             animation: scroll-reverse 40s linear infinite;
         }
+
+        /* Disable Swiper on Mobile for Case Study & News Blog */
+        @media (max-width: 1024px) {
+
+            .caseStudySwiper .swiper-wrapper,
+            .newsBlogSwiper .swiper-wrapper {
+                display: grid !important;
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 12px !important;
+                transform: none !important;
+                height: auto !important;
+            }
+
+            .caseStudySwiper .swiper-slide,
+            .newsBlogSwiper .swiper-slide {
+                width: 100% !important;
+                margin-right: 0 !important;
+                height: auto !important;
+            }
+
+            /* Perkecil font dan padding kartu di mobile */
+            .caseStudySwiper h4 {
+                font-size: 0.9rem !important;
+            }
+
+            .caseStudySwiper p,
+            .newsBlogSwiper p {
+                font-size: 0.7rem !important;
+                line-height: 1.3 !important;
+            }
+
+            .newsBlogSwiper h4 {
+                font-size: 0.85rem !important;
+            }
+
+            .newsBlogSwiper .p-10 {
+                padding: 1.5rem !important;
+            }
+
+            .caseStudySwiper .p-6 {
+                padding: 1rem !important;
+            }
+
+            /* Hide the teal navigation handles/tracks on mobile */
+            .case-study-nav-handle,
+            .news-blog-nav-handle,
+            .mt-16.flex.flex-col.gap-4 {
+                display: none !important;
+            }
+        }
     </style>
 
 
     {{-- News & Blog --}}
     <section class="py-16 md:py-24 bg-white overflow-hidden">
-        <div class="max-w-[1200px] mx-auto px-4 lg:px-12">
-            <!-- Header Content: Title & Action Button -->
+        <div class="max-w-[1200px] mx-auto px-6 lg:px-12">
+            <!-- Header Content: Title -->
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
-                <div>
-                    <p class="font-outfitserif text-bdd-gray text-[15px] uppercase tracking-[0.2em] mb-4">NEWS &
-                        BLOG</p>
-                    <h3 class="font-outfitserif text-xl md:text-[2.0rem] font-semibold text-[#222] leading-tight mb-4">
-                        Your time is valuable.
-                        <br>Read our insightful article within 5 minutes.</br>
+                <div class="text-left md:text-left">
+                    <p class="font-outfitserif text-bdd-gray text-[13px] md:text-[15px] uppercase tracking-[0.2em] mb-4">
+                        NEWS & BLOG</p>
+                    <h3 class="font-outfitserif text-2xl md:text-[2.0rem] font-semibold text-[#222] leading-tight mb-4">
+                        Your time is valuable.<br class="hidden md:block">
+                        Read our insightful article within 5 minutes.
                     </h3>
                 </div>
-                <div class="shrink-0">
+                <div class="hidden md:block shrink-0">
                     <a href="{{ route('news-blog') }}" class="btn-primary group">
                         Explore More Articles
                         <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none"
@@ -1537,8 +1667,8 @@
                         @foreach ($posts as $p)
                             <div class="swiper-slide h-auto">
                                 <div
-                                    class="bg-white min-h-[550px] rounded-2xl overflow-hidden border-[3px] border-[#222] shadow-[8px_8px_0px_#222] hover:shadow-[3px_3px_0px_#222] hover:translate-x-[5px] hover:translate-y-[5px] transition-all h-full flex flex-col group">
-                                    <div class="h-64 overflow-hidden relative">
+                                    class="bg-white min-h-[300px] md:min-h-[550px] rounded-2xl overflow-hidden border-[3px] border-[#222] shadow-[8px_8px_0px_#222] hover:shadow-[3px_3px_0px_#222] hover:translate-x-[5px] hover:translate-y-[5px] transition-all h-full flex flex-col group">
+                                    <div class="h-28 md:h-64 overflow-hidden relative">
                                         <img src="{{ $p[3] }}" alt="{{ $p[1] }}"
                                             class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
                                         <div class="absolute top-3 left-3">
@@ -1547,7 +1677,7 @@
                                                 ARTICLE</span>
                                         </div>
                                     </div>
-                                    <div class="p-10 flex flex-col grow">
+                                    <div class="p-4 md:p-10 flex flex-col grow">
                                         <span class="text-xs text-[#999] mb-3">{{ $p[0] }}</span>
                                         <h4
                                             class="font-outfitserif font-bold text-xl md:text-[1.3rem] text-[#222] mb-3 leading-snug group-hover:text-bdd-blue transition-colors line-clamp-2">
@@ -1606,7 +1736,18 @@
                     </div>
                 </div>
             </div>
-        </div>
+
+            <!-- Mobile Button - Only visible on mobile -->
+            <div class="mt-8 flex justify-center md:hidden">
+                <a href="{{ route('news-blog') }}"
+                    class="btn-primary w-full text-center flex justify-center items-center">
+                    Explore More Articles
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                </a>
+            </div>
         </div>
     </section>
 

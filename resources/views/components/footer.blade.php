@@ -1,5 +1,5 @@
 {{-- CTA Banner: Let's Grow --}}
-<section class="bg-bdd-footer py-16 md:py-24 relative rounded-t-[60px]">
+<section class="bg-bdd-footer py-16 md:py-24 relative rounded-t-[40px] md:rounded-t-[60px]">
     <div class="max-w-[1020px] mx-auto px-6 lg:px-12">
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-12">
             <div class="max-w-xl">
@@ -50,7 +50,7 @@
     </div>
 </section>
 
-<footer class="bg-[#111] text-white overflow-hidden rounded-t-[60px] -mt-12 relative z-20">
+<footer class="bg-[#111] text-white overflow-hidden rounded-t-[40px] md:rounded-t-[60px] -mt-12 relative z-20">
     <div class="max-w-[1020px] mx-auto px-6 lg:px-12 pt-24 pb-16">
 
         {{-- Top Section --}}
@@ -141,7 +141,7 @@
         </div>
 
         {{-- Bottom Navigation --}}
-        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-12 lg:gap-8 pt-10 border-t border-white/5">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 pt-10 border-t border-white/5">
             {{-- Col 1 --}}
             <div>
                 <h5 class="text-[11px] font-bold text-white/90 uppercase tracking-wider mb-8">BOLEH DICoba DIGITAL</h5>

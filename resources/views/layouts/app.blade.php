@@ -10,7 +10,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
         rel="stylesheet">
-    <link rel="icon" href="https://bolehdicoba.com/wp-content/uploads/2024/03/Logo.png" type="image/png">
+    <link rel="icon" href="{{ asset('images/Logobdd2.png') }}" type="image/png">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 

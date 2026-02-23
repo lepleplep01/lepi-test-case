@@ -110,8 +110,6 @@
         .achievement-card {
             width: 160px;
             height: 120px;
-            border: 2px solid #222;
-            border-radius: 12px;
             box-shadow: 4px 4px 0 #222;
             display: flex;
             align-items: center;
@@ -130,8 +128,6 @@
         .inner-frame {
             width: 100%;
             height: 100%;
-            border: 1.5px solid #222;
-            border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
