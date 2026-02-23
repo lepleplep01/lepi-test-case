@@ -3,7 +3,7 @@
 
         <!-- LEFT LOGOS -->
         <div class="achievement-left show">
-            <div class="logo-row max-w-full gap-8">
+            <div class="logo-row max-w-full gap-6">
 
                 <!-- Meta Partner -->
                 <div class="achievement-card">
@@ -13,13 +13,9 @@
                 </div>
 
                 <!-- Meta Certified -->
-                <div class="achievement-card meta-card">
-                    <div class="meta-top">
+                <div class="achievement-card">
+                    <div class="inner-frame">
                         <img src="https://bolehdicoba.com/wp-content/uploads/2024/03/Group-40130.png">
-                    </div>
-                    <div class="meta-bottom">
-                        <span>Media</span>
-                        <strong>CERTIFIED COMPANY</strong>
                     </div>
                 </div>
 
@@ -39,18 +35,9 @@
                 </div>
 
                 <!-- Google -->
-                <div class="achievement-card google-card">
-                    <div class="premier">PREMIER</div>
-                    <div class="google-body">
-                        <div class="google-word">
-                            <span class="g1">G</span>
-                            <span class="g2">o</span>
-                            <span class="g3">o</span>
-                            <span class="g1">g</span>
-                            <span class="g4">l</span>
-                            <span class="g2">e</span>
-                        </div>
-                        <strong>Partner</strong>
+                <div class="achievement-card">
+                    <div class="inner-frame">
+                        <img src="https://bolehdicoba.com/wp-content/uploads/2024/03/Group-40163-1.png">
                     </div>
                 </div>
 
@@ -62,8 +49,9 @@
             <div class="text-wrap">
                 <p class="label">OUR ACHIEVEMENTS</p>
                 <h2 class="font-outfitserif">
-                    A Legacy of Excellence:<br>
-                    Our Journey of<br>
+                    A Legacy of
+                    <br>Excellence:Our<br>
+                    Journey of<br>
                     Achievements
                 </h2>
             </div>
@@ -75,24 +63,24 @@
 <style>
     .achievement-section {
         background: #ADC2E6;
-        border-top: 2px solid #222;
-        border-bottom: 2px solid #222;
+        border-top: 1.5px solid #222;
+        border-bottom: 1.5px solid #222;
         overflow: hidden;
     }
 
     .achievement-inner {
         display: flex;
         flex-direction: row;
-        min-height: 418px;
+        min-height: 360px;
     }
 
     /* LEFT - LOGOS */
     .achievement-left {
-        width: 62%;
-        border-right: 2px solid #222;
+        width: 66%;
+        border-right: 1.5px solid #222;
         display: flex;
         align-items: center;
-        padding: 40px 30px;
+        padding: 40px 40px;
         justify-content: center;
     }
 
@@ -101,22 +89,22 @@
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        gap: 50px;
+        gap: 40px;
         width: 100%;
+        max-width: 100%;
         flex-wrap: nowrap;
     }
 
     /* CARD BASE */
     .achievement-card {
-        width: 160px;
-        height: 120px;
-        box-shadow: 4px 4px 0 #222;
+        width: 140px;
+        height: 110px;
         display: flex;
         align-items: center;
         justify-content: center;
         position: relative;
         transition: .22s cubic-bezier(.2, .7, .2, 1);
-        background: white;
+        background: transparent;
         flex-shrink: 0;
     }
 
@@ -131,8 +119,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 12px;
-        background: white;
+        padding: 5px;
+        background: transparent;
     }
 
     .inner-frame img {
@@ -144,124 +132,21 @@
     }
 
     /* META CARD */
-    .meta-card {
-        flex-direction: column;
-        overflow: hidden;
-        padding: 0;
-    }
+    /* REMOVED META SPECIFIC STYLES FOR CLEANER LOOK */
 
-    .meta-top {
-        width: 100%;
-        height: 55%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: #E8EEF5;
-        padding: 0;
-    }
-
-    .meta-top img {
-        width: 65%;
-        height: auto;
-    }
-
-    .meta-bottom {
-        width: 100%;
-        height: 45%;
-        background: #0866FF;
-        color: white;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 8px;
-    }
-
-    .meta-bottom span {
-        font-size: 11px;
-        font-weight: 400;
-        line-height: 1;
-        margin-bottom: 2px;
-    }
-
-    .meta-bottom strong {
-        font-size: 9px;
-        font-weight: 700;
-        letter-spacing: 0.3px;
-        line-height: 1;
-    }
-
-    /* GOOGLE */
-    .google-card {
-        display: flex;
-        flex-direction: row;
-        overflow: hidden;
-        padding: 0;
-    }
 
     .shopify-logo {
         max-height: 60px;
     }
 
-    .premier {
-        width: 22px;
-        background: #EA4335;
-        color: white;
-        font-size: 8px;
-        font-weight: 700;
-        letter-spacing: 0.5px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        writing-mode: vertical-rl;
-        text-orientation: mixed;
-        transform: rotate(180deg);
-    }
-
-    .google-body {
-        flex: 1;
-        display: flex;
-        background: white;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 2px;
-    }
-
-    .google-word span {
-        font-size: 26px;
-        font-weight: 700;
-    }
-
-    .g1 {
-        color: #4285F4;
-    }
-
-    .g2 {
-        color: #EA4335;
-    }
-
-    .g3 {
-        color: #FBBC05;
-    }
-
-    .g4 {
-        color: #34A853;
-    }
-
-    .google-body strong {
-        font-size: 13px;
-        font-weight: 600;
-        color: #5F6368;
-    }
 
     /* RIGHT - TEXT */
     .achievement-right {
-        width: 38%;
+        width: 34%;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 50px 40px;
+        padding: 50px 30px;
     }
 
     .text-wrap {
@@ -295,7 +180,7 @@
         .achievement-left {
             width: 100%;
             border-right: none;
-            border-bottom: 2px solid #222;
+            border-bottom: 1.5px solid #222;
             padding: 30px 20px;
         }
 

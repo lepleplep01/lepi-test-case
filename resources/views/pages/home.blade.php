@@ -60,30 +60,29 @@
     {{-- Client Logos Section --}}
     <section class="pt-10 md:pt-10 pb-16 md:pb-24 bg-white md:bg-gray-50" x-data="{ activeTab: 'fashion' }">
         <div class="max-w-full mx-auto px-0 md:px-10">
-            <div class="bg-white md:rounded-3xl md:border-[3px] border-[#222] p-6 md:p-15 overflow-hidden relative">
+            <div class="bg-white md:rounded-2xl md:border-[1px] border-[#222] p-6 md:p-15 overflow-hidden relative">
                 <div class="border-t border-gray-100 absolute top-0 left-0 w-full hidden md:block"></div>
 
                 <h3
-                    class="font-outfitserif text-[24px] md:text-[2rem] font-medium text-center text-[#222] mt-4 mb-10 leading-[1.3] md:leading-snug">
-                    Over <span class="text-[#00B69B] font-bold">800+</span> Business growing with<br>
-                    Boleh Dicoba Digital
+                    class="font-outfitserif text-[24px] md:text-[1.4rem] font-normal text-center text-[#222] mt-4 mb-10 leading-[1.3] md:leading-snug">
+                    Over <span class="text-[#00B69B]">800+</span> Business growing with Boleh Dicoba Digital
                 </h3>
 
                 <div
                     class="flex items-center justify-start md:justify-center gap-6 md:gap-12 border-b border-gray-100 mb-12 pb-0 overflow-x-auto no-scrollbar px-2 md:px-0">
                     @foreach (['fashion' => 'Fashion', 'fnb' => 'FnB', 'beauty' => 'Beauty', 'lifestyle' => 'Lifestyle', 'startup' => 'Startup & Other', 'corporate' => 'FMCGs & Corporations'] as $k => $v)
                         <button
-                            @click="activeTab='{{ $k }}'; $nextTick(() => { 
-                            if($k === 'fashion') window.fashionSwiper?.update();
-                            if($k === 'fnb') window.fnbSwiper?.update();
-                            if($k === 'beauty') window.beautySwiper?.update();
-                            if($k === 'lifestyle') window.lifestyleSwiper?.update();
-                            if($k === 'startup') window.startupSwiper?.update();
-                            if($k === 'corporate') window.corporateSwiper?.update();
-                        })"
+                            @click="activeTab='{{ $k }}'; setTimeout(() => { 
+                                window.fashionSwiper?.update();
+                                window.fnbSwiper?.update();
+                                window.beautySwiper?.update();
+                                window.lifestyleSwiper?.update();
+                                window.startupSwiper?.update();
+                                window.corporateSwiper?.update();
+                            }, 50)"
                             :class="activeTab === '{{ $k }}' ? 'border-[#5B84C4] text-[#5B84C4]' :
                                 'border-transparent text-[#999] hover:text-[#222]'"
-                            class="pb-4 text-[16px] md:text-[18px] font-semibold border-b-[3px] whitespace-nowrap transition-all duration-300">
+                            class="pb-4 text-[16px] md:text-[18px] border-b-[2px] whitespace-nowrap transition-all duration-300">
                             {{ $v }}
                         </button>
                     @endforeach
@@ -94,9 +93,10 @@
                     if (!window.fashionSwiper) {
                         window.fashionSwiper = new Swiper('.fashionSwiper', {
                             slidesPerView: 'auto',
-                            spaceBetween: 30,
+                            spaceBetween: 40,
                             loop: true,
                             speed: 5000,
+                            loopedSlides: 10,
                             autoplay: {
                                 delay: 0,
                                 disableOnInteraction: false
@@ -110,10 +110,10 @@
                         window.fashionSwiper.update();
                     }
                 })"
-                    class="swiper fashionSwiper py-4">
+                    class="swiper fashionSwiper py-4 min-h-[80px]">
                     <div class="swiper-wrapper">
                         @foreach (['Hoops', 'M231', 'calla', 'love-fair', 'cottonink', 'eiger', 'MKS-1', 'Spotec', 'brodo', 'Jiniso', 'dauky', 'elzatta', 'mayoutfit', 'Viola', 'Ripcurl', 'NCR', 'CRSL', 'Sophie-Martin'] as $logo)
-                            <div class="swiper-slide flex justify-center items-center w-auto">
+                            <div class="swiper-slide !w-auto flex-shrink-0 flex justify-center items-center">
                                 <img src="https://bolehdicoba.com/wp-content/uploads/2024/03/Property-1{{ $logo }}.png"
                                     alt="{{ $logo }}"
                                     class="h-14 md:h-12 object-contain opacity-100 hover:opacity-100 transition duration-500">
@@ -128,9 +128,10 @@
                     if (!window.fnbSwiper) {
                         window.fnbSwiper = new Swiper('.fnbSwiper', {
                             slidesPerView: 'auto',
-                            spaceBetween: 30,
+                            spaceBetween: 40,
                             loop: true,
                             speed: 5000,
+                            loopedSlides: 10,
                             autoplay: {
                                 delay: 0,
                                 disableOnInteraction: false
@@ -143,10 +144,11 @@
                     } else {
                         window.fnbSwiper.update();
                     }
-                })" class="swiper fnbSwiper py-4">
+                })"
+                    class="swiper fnbSwiper py-4 min-h-[80px]">
                     <div class="swiper-wrapper">
-                        @foreach (['Sukha', 'Holycow', 'Richeese', 'Boca-Rica', 'Primaflakes'] as $logo)
-                            <div class="swiper-slide flex justify-center items-center w-auto">
+                        @foreach (array_merge(['Sukha', 'Holycow', 'Richeese', 'Boca-Rica', 'Primaflakes'], ['Sukha', 'Holycow', 'Richeese', 'Boca-Rica', 'Primaflakes'], ['Sukha', 'Holycow', 'Richeese', 'Boca-Rica', 'Primaflakes'], ['Sukha', 'Holycow', 'Richeese', 'Boca-Rica', 'Primaflakes']) as $logo)
+                            <div class="swiper-slide !w-auto flex-shrink-0 flex justify-center items-center">
                                 <img src="https://bolehdicoba.com/wp-content/uploads/2024/03/Property-1{{ $logo }}.png"
                                     alt="{{ $logo }}"
                                     class="h-14 md:h-12 object-contain opacity-100 hover:opacity-100 transition duration-500">
@@ -161,9 +163,10 @@
                     if (!window.beautySwiper) {
                         window.beautySwiper = new Swiper('.beautySwiper', {
                             slidesPerView: 'auto',
-                            spaceBetween: 30,
+                            spaceBetween: 40,
                             loop: true,
                             speed: 5000,
+                            loopedSlides: 10,
                             autoplay: {
                                 delay: 0,
                                 disableOnInteraction: false
@@ -177,10 +180,10 @@
                         window.beautySwiper.update();
                     }
                 })"
-                    class="swiper beautySwiper py-4">
+                    class="swiper beautySwiper py-4 min-h-[80px]">
                     <div class="swiper-wrapper">
                         @foreach (['Npure', 'Studio-Tropik', 'ESQA', 'shinzui', 'evangeline', 'HMNS', 'Kitshy', 'Kiva', 'dear-me-beauty', 'rose-all-day', 'elsheskin', 'hayyu-clinic', 'nadifa-clinic', 'layr', 'fordive', 'emina', 'BG-Skin'] as $logo)
-                            <div class="swiper-slide flex justify-center items-center w-auto">
+                            <div class="swiper-slide !w-auto flex-shrink-0 flex justify-center items-center">
                                 <img src="https://bolehdicoba.com/wp-content/uploads/2024/03/Property-1{{ $logo }}.png"
                                     alt="{{ $logo }}"
                                     class="h-14 md:h-12 w-auto object-contain opacity-100 hover:opacity-100 transition duration-500">
@@ -195,9 +198,10 @@
                     if (!window.lifestyleSwiper) {
                         window.lifestyleSwiper = new Swiper('.lifestyleSwiper', {
                             slidesPerView: 'auto',
-                            spaceBetween: 30,
+                            spaceBetween: 40,
                             loop: true,
                             speed: 5000,
+                            loopedSlides: 10,
                             autoplay: {
                                 delay: 0,
                                 disableOnInteraction: false
@@ -211,10 +215,10 @@
                         window.lifestyleSwiper.update();
                     }
                 })"
-                    class="swiper lifestyleSwiper py-4">
+                    class="swiper lifestyleSwiper py-4 min-h-[80px]">
                     <div class="swiper-wrapper">
                         @foreach (['Domibed', 'UBS-lifestyle', 'Desty', 'Lotus-archi', 'Mom-Uung', 'mama-Bear', 'Moro', 'Eyesight', 'Satu-momen', 'Digimo', 'infarm', 'Seolmi', 'Slimsure', 'Moell'] as $logo)
-                            <div class="swiper-slide flex justify-center items-center w-auto">
+                            <div class="swiper-slide !w-auto flex-shrink-0 flex justify-center items-center">
                                 <img src="https://bolehdicoba.com/wp-content/uploads/2024/03/Property-1{{ $logo }}.png"
                                     alt="{{ $logo }}"
                                     class="h-14 md:h-12 object-contain opacity-100 hover:opacity-100 transition duration-500">
@@ -229,9 +233,10 @@
                     if (!window.startupSwiper) {
                         window.startupSwiper = new Swiper('.startupSwiper', {
                             slidesPerView: 'auto',
-                            spaceBetween: 30,
+                            spaceBetween: 40,
                             loop: true,
                             speed: 5000,
+                            loopedSlides: 10,
                             autoplay: {
                                 delay: 0,
                                 disableOnInteraction: false
@@ -245,13 +250,13 @@
                         window.startupSwiper.update();
                     }
                 })"
-                    class="swiper startupSwiper py-4">
+                    class="swiper startupSwiper py-4 min-h-[80px]">
                     <div class="swiper-wrapper">
                         @foreach (['Domibed', 'Prosleep', 'Hawkeye', 'kasanoa', 'UBS-lifestyle', 'Deltomed', 'Lotus-archi', 'Satu-momen', 'Ivory-Bridal', 'mahatex', 'Octopus', 'Eyesight', 'NP-Cunsult', 'Digitravel'] as $logo)
-                            <div class="swiper-slide flex justify-center items-center w-auto">
+                            <div class="swiper-slide !w-auto flex-shrink-0 flex justify-center items-center">
                                 <img src="https://bolehdicoba.com/wp-content/uploads/2024/03/Property-1{{ $logo }}.png"
                                     alt="{{ $logo }}"
-                                    class="h-14 md:h-12 w-auto object-contain opacity-100 hover:opacity-100 transition duration-500">
+                                    class="h-14 md:h-10 w-auto object-contain opacity-100 hover:opacity-100 transition duration-500">
                             </div>
                         @endforeach
                     </div>
@@ -262,9 +267,10 @@
                     if (!window.corporateSwiper) {
                         window.corporateSwiper = new Swiper('.corporateSwiper', {
                             slidesPerView: 'auto',
-                            spaceBetween: 30,
+                            spaceBetween: 40,
                             loop: true,
                             speed: 5000,
+                            loopedSlides: 10,
                             autoplay: {
                                 delay: 0,
                                 disableOnInteraction: false
@@ -278,10 +284,10 @@
                         window.corporateSwiper.update();
                     }
                 })"
-                    class="swiper corporateSwiper py-4">
+                    class="swiper corporateSwiper py-4 min-h-[80px]">
                     <div class="swiper-wrapper">
                         @foreach (['Axa', 'UNHCR', 'IDX', 'Logitech', 'tokocrypto', 'Gowork', 'Jobstreet', 'Grab', 'Djarum', 'Sidomuncul', 'Grand-duta', 'Sido-muncul-natural', 'deltomedd', 'Amoda', 'DNVB', 'Tsurvey', 'NPC-office', 'Kantor-Gunawa'] as $logo)
-                            <div class="swiper-slide flex justify-center items-center w-auto">
+                            <div class="swiper-slide !w-auto flex-shrink-0 flex justify-center items-center">
                                 <img src="https://bolehdicoba.com/wp-content/uploads/2024/03/Property-1{{ $logo }}.png"
                                     alt="{{ $logo }}"
                                     class="h-14 md:h-12 w-auto object-contain opacity-100 hover:opacity-100 transition duration-500">
@@ -575,7 +581,7 @@
     <x-achievements-custom />
 
     {{-- Why Choose Us --}}
-    <section class="py-16 md:py-20 bg-gray-50">
+    <section class="pt-16 md:pt-20 pb-8 md:pb-10 bg-gray-50">
         <div class="max-w-full mx-auto px-4">
             {{-- Flexbox dengan items-center untuk vertikal tengah --}}
             <div class="flex flex-col lg:flex-row items-center gap-4 lg:gap-8">
@@ -686,7 +692,7 @@
 
     {{-- Services with Sticky Card Stacking Animation --}}
 
-    <section class="py-20 md:py-24 bg-gray-50" id="services-section">
+    <section class="pt-8 md:pt-10 pb-20 md:pb-24 bg-gray-50" id="services-section">
         <div class="max-w-full mx-auto px-6 md:px-12">
             <!-- Flex container: 2 kolom -->
             <div class="max-w-full flex flex-col md:flex-row justify-center items-center">
